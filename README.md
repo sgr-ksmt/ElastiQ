@@ -16,6 +16,12 @@ Generate ElasticSearch query in Swift
 ## How to use
 
 ```swift
+@objcMember
+class Recipe: NSObject {
+    dynamic var cookTimeMin: Int = 0
+    dynamic var title: String = ""
+}
+
 let query = ElastiQ()
     .range(\Recipe.cookTimeMin, [.lt(30), .gte(10)])
 //-------------------

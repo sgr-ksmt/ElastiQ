@@ -8,9 +8,29 @@ Generate ElasticSearch query in Swift
 [![CocoaPods](https://img.shields.io/badge/Cocoa%20Pods-✓-4BC51D.svg?style=flat)](https://cocoapods.org/pods/Tongs)
 [![CocoaPodsDL](https://img.shields.io/cocoapods/dt/Tongs.svg)](https://cocoapods.org/pods/Tongs)
 
+## Feature
+- MethodChain
+- Type-Safe.
+- KeyPath compatible.
+
 ## How to use
 
 ```swift
+let query = ElastiQ()
+    .range(\Recipe.cookTimeMin, [.lt(30), .gte(10)])
+//-------------------
+{
+  "query": {
+    "range": {
+      "cookTimeMin": {
+        "gte":10,
+        "lt":30
+      }
+    }
+  }
+}
+
+
 let query = ElastiQ()
     .bool({ query in
         query.filter { filter in

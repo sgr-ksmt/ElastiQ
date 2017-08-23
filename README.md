@@ -22,8 +22,11 @@ class Recipe: NSObject {
     dynamic var title: String = ""
 }
 
-let query = ElastiQ()
+let query = Tongs()
     .range(\Recipe.cookTimeMin, [.lt(30), .gte(10)])
+    
+let json = try! query.json()
+print(String(data: json, encoding: .utf8))
 //-------------------
 {
   "query": {
@@ -37,7 +40,7 @@ let query = ElastiQ()
 }
 
 
-let query = ElastiQ()
+let query = Tongs()
     .bool({ query in
         query.filter { filter in
             filter
@@ -45,6 +48,9 @@ let query = ElastiQ()
                 .range(\Recipe.cookTimeMin, .lt(30))
         }
     })
+
+let json = try! query.json()
+print(String(data: json, encoding: .utf8))
 //----------------
 {
   "query" : {

@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1609B5D31F4D51FF00AD0093 /* ParameterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1609B5D21F4D51FF00AD0093 /* ParameterProtocols.swift */; };
-		1609B5D51F4D521200AD0093 /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1609B5D41F4D521200AD0093 /* Value.swift */; };
-		1609B5D71F4D524000AD0093 /* HasParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1609B5D61F4D524000AD0093 /* HasParameter.swift */; };
-		1609B5D91F4D52C200AD0093 /* Tongs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1609B5D81F4D52C200AD0093 /* Tongs.swift */; };
-		1609B5DB1F4D52E200AD0093 /* BoolQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1609B5DA1F4D52E200AD0093 /* BoolQuery.swift */; };
-		1609B5DF1F4D53D900AD0093 /* Parameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1609B5DE1F4D53D900AD0093 /* Parameter.swift */; };
 		168723961F4D44BC00AC575A /* Tongs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1687238C1F4D44BC00AC575A /* Tongs.framework */; };
 		1687239B1F4D44BC00AC575A /* TongsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1687239A1F4D44BC00AC575A /* TongsTests.swift */; };
 		1687239D1F4D44BC00AC575A /* Tongs.h in Headers */ = {isa = PBXBuildFile; fileRef = 1687238F1F4D44BC00AC575A /* Tongs.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1687DA361F4D608A0063757A /* BoolQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1687DA301F4D60800063757A /* BoolQuery.swift */; };
+		1687DA371F4D608A0063757A /* HasParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1687DA311F4D60800063757A /* HasParameter.swift */; };
+		1687DA381F4D608A0063757A /* Parameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1687DA321F4D60800063757A /* Parameter.swift */; };
+		1687DA391F4D608A0063757A /* ParameterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1687DA331F4D60800063757A /* ParameterProtocols.swift */; };
+		1687DA3A1F4D608A0063757A /* Tongs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1687DA341F4D60800063757A /* Tongs.swift */; };
+		1687DA3B1F4D608A0063757A /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1687DA351F4D60800063757A /* Value.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,18 +30,18 @@
 
 /* Begin PBXFileReference section */
 		1609B5D11F4D480500AD0093 /* ExamplePlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ExamplePlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		1609B5D21F4D51FF00AD0093 /* ParameterProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterProtocols.swift; sourceTree = "<group>"; };
-		1609B5D41F4D521200AD0093 /* Value.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Value.swift; sourceTree = "<group>"; };
-		1609B5D61F4D524000AD0093 /* HasParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasParameter.swift; sourceTree = "<group>"; };
-		1609B5D81F4D52C200AD0093 /* Tongs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tongs.swift; sourceTree = "<group>"; };
-		1609B5DA1F4D52E200AD0093 /* BoolQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoolQuery.swift; sourceTree = "<group>"; };
-		1609B5DE1F4D53D900AD0093 /* Parameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameter.swift; sourceTree = "<group>"; };
 		1687238C1F4D44BC00AC575A /* Tongs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Tongs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1687238F1F4D44BC00AC575A /* Tongs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tongs.h; sourceTree = "<group>"; };
 		168723901F4D44BC00AC575A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		168723951F4D44BC00AC575A /* TongsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TongsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1687239A1F4D44BC00AC575A /* TongsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TongsTests.swift; sourceTree = "<group>"; };
 		1687239C1F4D44BC00AC575A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1687DA301F4D60800063757A /* BoolQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoolQuery.swift; sourceTree = "<group>"; };
+		1687DA311F4D60800063757A /* HasParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasParameter.swift; sourceTree = "<group>"; };
+		1687DA321F4D60800063757A /* Parameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameter.swift; sourceTree = "<group>"; };
+		1687DA331F4D60800063757A /* ParameterProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterProtocols.swift; sourceTree = "<group>"; };
+		1687DA341F4D60800063757A /* Tongs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tongs.swift; sourceTree = "<group>"; };
+		1687DA351F4D60800063757A /* Value.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Value.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +68,7 @@
 			children = (
 				1609B5D11F4D480500AD0093 /* ExamplePlayground.playground */,
 				1687238E1F4D44BC00AC575A /* Tongs */,
+				1687DA2F1F4D60800063757A /* Sources */,
 				168723991F4D44BC00AC575A /* TongsTests */,
 				1687238D1F4D44BC00AC575A /* Products */,
 			);
@@ -87,12 +88,6 @@
 			children = (
 				1687238F1F4D44BC00AC575A /* Tongs.h */,
 				168723901F4D44BC00AC575A /* Info.plist */,
-				1609B5D21F4D51FF00AD0093 /* ParameterProtocols.swift */,
-				1609B5D41F4D521200AD0093 /* Value.swift */,
-				1609B5D61F4D524000AD0093 /* HasParameter.swift */,
-				1609B5D81F4D52C200AD0093 /* Tongs.swift */,
-				1609B5DA1F4D52E200AD0093 /* BoolQuery.swift */,
-				1609B5DE1F4D53D900AD0093 /* Parameter.swift */,
 			);
 			path = Tongs;
 			sourceTree = "<group>";
@@ -104,6 +99,19 @@
 				1687239C1F4D44BC00AC575A /* Info.plist */,
 			);
 			path = TongsTests;
+			sourceTree = "<group>";
+		};
+		1687DA2F1F4D60800063757A /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				1687DA301F4D60800063757A /* BoolQuery.swift */,
+				1687DA311F4D60800063757A /* HasParameter.swift */,
+				1687DA321F4D60800063757A /* Parameter.swift */,
+				1687DA331F4D60800063757A /* ParameterProtocols.swift */,
+				1687DA341F4D60800063757A /* Tongs.swift */,
+				1687DA351F4D60800063757A /* Value.swift */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,12 +225,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1609B5D31F4D51FF00AD0093 /* ParameterProtocols.swift in Sources */,
-				1609B5DB1F4D52E200AD0093 /* BoolQuery.swift in Sources */,
-				1609B5D91F4D52C200AD0093 /* Tongs.swift in Sources */,
-				1609B5DF1F4D53D900AD0093 /* Parameter.swift in Sources */,
-				1609B5D51F4D521200AD0093 /* Value.swift in Sources */,
-				1609B5D71F4D524000AD0093 /* HasParameter.swift in Sources */,
+				1687DA381F4D608A0063757A /* Parameter.swift in Sources */,
+				1687DA391F4D608A0063757A /* ParameterProtocols.swift in Sources */,
+				1687DA3A1F4D608A0063757A /* Tongs.swift in Sources */,
+				1687DA371F4D608A0063757A /* HasParameter.swift in Sources */,
+				1687DA361F4D608A0063757A /* BoolQuery.swift in Sources */,
+				1687DA3B1F4D608A0063757A /* Value.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

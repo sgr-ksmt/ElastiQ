@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1609B5D31F4D51FF00AD0093 /* ParameterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1609B5D21F4D51FF00AD0093 /* ParameterProtocols.swift */; };
+		1609B5D51F4D521200AD0093 /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1609B5D41F4D521200AD0093 /* Value.swift */; };
+		1609B5D71F4D524000AD0093 /* HasParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1609B5D61F4D524000AD0093 /* HasParameter.swift */; };
+		1609B5D91F4D52C200AD0093 /* Tongs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1609B5D81F4D52C200AD0093 /* Tongs.swift */; };
+		1609B5DB1F4D52E200AD0093 /* BoolQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1609B5DA1F4D52E200AD0093 /* BoolQuery.swift */; };
+		1609B5DF1F4D53D900AD0093 /* Parameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1609B5DE1F4D53D900AD0093 /* Parameter.swift */; };
 		168723961F4D44BC00AC575A /* Tongs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1687238C1F4D44BC00AC575A /* Tongs.framework */; };
 		1687239B1F4D44BC00AC575A /* TongsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1687239A1F4D44BC00AC575A /* TongsTests.swift */; };
 		1687239D1F4D44BC00AC575A /* Tongs.h in Headers */ = {isa = PBXBuildFile; fileRef = 1687238F1F4D44BC00AC575A /* Tongs.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -23,6 +29,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1609B5D11F4D480500AD0093 /* ExamplePlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ExamplePlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		1609B5D21F4D51FF00AD0093 /* ParameterProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterProtocols.swift; sourceTree = "<group>"; };
+		1609B5D41F4D521200AD0093 /* Value.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Value.swift; sourceTree = "<group>"; };
+		1609B5D61F4D524000AD0093 /* HasParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasParameter.swift; sourceTree = "<group>"; };
+		1609B5D81F4D52C200AD0093 /* Tongs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tongs.swift; sourceTree = "<group>"; };
+		1609B5DA1F4D52E200AD0093 /* BoolQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoolQuery.swift; sourceTree = "<group>"; };
+		1609B5DE1F4D53D900AD0093 /* Parameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameter.swift; sourceTree = "<group>"; };
 		1687238C1F4D44BC00AC575A /* Tongs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Tongs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1687238F1F4D44BC00AC575A /* Tongs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tongs.h; sourceTree = "<group>"; };
 		168723901F4D44BC00AC575A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,6 +66,7 @@
 		168723821F4D44BC00AC575A = {
 			isa = PBXGroup;
 			children = (
+				1609B5D11F4D480500AD0093 /* ExamplePlayground.playground */,
 				1687238E1F4D44BC00AC575A /* Tongs */,
 				168723991F4D44BC00AC575A /* TongsTests */,
 				1687238D1F4D44BC00AC575A /* Products */,
@@ -73,6 +87,12 @@
 			children = (
 				1687238F1F4D44BC00AC575A /* Tongs.h */,
 				168723901F4D44BC00AC575A /* Info.plist */,
+				1609B5D21F4D51FF00AD0093 /* ParameterProtocols.swift */,
+				1609B5D41F4D521200AD0093 /* Value.swift */,
+				1609B5D61F4D524000AD0093 /* HasParameter.swift */,
+				1609B5D81F4D52C200AD0093 /* Tongs.swift */,
+				1609B5DA1F4D52E200AD0093 /* BoolQuery.swift */,
+				1609B5DE1F4D53D900AD0093 /* Parameter.swift */,
 			);
 			path = Tongs;
 			sourceTree = "<group>";
@@ -148,6 +168,7 @@
 				TargetAttributes = {
 					1687238B1F4D44BC00AC575A = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					168723941F4D44BC00AC575A = {
@@ -196,6 +217,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1609B5D31F4D51FF00AD0093 /* ParameterProtocols.swift in Sources */,
+				1609B5DB1F4D52E200AD0093 /* BoolQuery.swift in Sources */,
+				1609B5D91F4D52C200AD0093 /* Tongs.swift in Sources */,
+				1609B5DF1F4D53D900AD0093 /* Parameter.swift in Sources */,
+				1609B5D51F4D521200AD0093 /* Value.swift in Sources */,
+				1609B5D71F4D524000AD0093 /* HasParameter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +361,7 @@
 		168723A11F4D44BC00AC575A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -346,6 +374,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "-.Tongs";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -354,6 +383,7 @@
 		168723A21F4D44BC00AC575A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -374,6 +404,7 @@
 		168723A41F4D44BC00AC575A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TongsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -387,6 +418,7 @@
 		168723A51F4D44BC00AC575A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TongsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

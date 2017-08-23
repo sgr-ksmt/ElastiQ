@@ -1,12 +1,12 @@
-# Tongs
+# ElastiQ
 Generate ElasticSearch query in Swift
 
 
-[![GitHub release](https://img.shields.io/github/release/sgr-ksmt/Tongs.svg)](https://github.com/sgr-ksmt/Tongs/releases)
+[![GitHub release](https://img.shields.io/github/release/sgr-ksmt/ElastiQ.svg)](https://github.com/sgr-ksmt/ElastiQ/releases)
 ![Language](https://img.shields.io/badge/language-Swift%204-orange.svg)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![CocoaPods](https://img.shields.io/badge/Cocoa%20Pods-✓-4BC51D.svg?style=flat)](https://cocoapods.org/pods/Tongs)
-[![CocoaPodsDL](https://img.shields.io/cocoapods/dt/Tongs.svg)](https://cocoapods.org/pods/Tongs)
+[![CocoaPods](https://img.shields.io/badge/Cocoa%20Pods-✓-4BC51D.svg?style=flat)](https://cocoapods.org/pods/ElastiQ)
+[![CocoaPodsDL](https://img.shields.io/cocoapods/dt/ElastiQ.svg)](https://cocoapods.org/pods/ElastiQ)
 
 ## Feature
 - MethodChain
@@ -22,9 +22,9 @@ class Recipe: NSObject {
     dynamic var title: String = ""
 }
 
-let query = Tongs()
+let query = ElastiQ()
     .range(\Recipe.cookTimeMin, [.lt(30), .gte(10)])
-    
+
 let json = try! query.json()
 print(String(data: json, encoding: .utf8))
 //-------------------
@@ -40,7 +40,7 @@ print(String(data: json, encoding: .utf8))
 }
 
 
-let query = Tongs()
+let query = ElastiQ()
     .bool({ query in
         query.filter { filter in
             filter
@@ -92,7 +92,7 @@ print(String(data: json, encoding: .utf8))
 - Add the following to your *Cartfile*:
 
 ```bash
-github "sgr-ksmt/Tongs" ~> 0.1
+github "sgr-ksmt/ElastiQ" ~> 0.1
 ```
 
 - Run `carthage update`
@@ -102,11 +102,11 @@ github "sgr-ksmt/Tongs" ~> 0.1
 
 ### CocoaPods
 
-**Tongs** is available through [CocoaPods](http://cocoapods.org). To install
+**ElastiQ** is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'Tongs', '~> 0.1'
+pod 'ElastiQ', '~> 0.1'
 ```
 
 and run `pod install`
@@ -115,7 +115,7 @@ and run `pod install`
 Download all `*.swift` files and put your project.
 
 ## Change log
-Change log is [here](https://github.com/sgr-ksmt/Tongs/blob/master/CHANGELOG.md).
+Change log is [here](https://github.com/sgr-ksmt/ElastiQ/blob/master/CHANGELOG.md).
 
 ## Communication
 - If you found a bug, open an issue.
@@ -124,4 +124,4 @@ Change log is [here](https://github.com/sgr-ksmt/Tongs/blob/master/CHANGELOG.md)
 
 ## License
 
-**Tongs** is under MIT license. See the [LICENSE](LICENSE) file for more info.
+**ElastiQ** is under MIT license. See the [LICENSE](LICENSE) file for more info.

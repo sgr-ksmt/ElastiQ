@@ -1,21 +1,21 @@
 //: Playground - noun: a place where people can play
 
 import UIKit
-import Tongs
+import ElastiQ
 
 class Recipe {
     @objc dynamic var cookTimeMin: Int = 0
     @objc dynamic var title: String = ""
 }
 
-func printJSON(_ query: Tongs) {
+func printJSON(_ query: ElastiQ) {
     let jsonData = try! query.json()
     let json = String(data: jsonData, encoding: .utf8)!
     print(json)
 }
 
 do {
-    let query = Tongs()
+    let query = ElastiQ()
         .term(\Recipe.cookTimeMin, 10)
 
     printJSON(query)
@@ -24,7 +24,7 @@ do {
 print("----------------")
 
 do {
-    let query = Tongs()
+    let query = ElastiQ()
         .terms(\Recipe.cookTimeMin, [10, 15, 20])
 
     printJSON(query)
@@ -33,7 +33,7 @@ do {
 print("----------------")
 
 do {
-    let query = Tongs()
+    let query = ElastiQ()
         .range(\Recipe.cookTimeMin, .lt(10))
 
     printJSON(query)
@@ -42,7 +42,7 @@ do {
 print("----------------")
 
 do {
-    let query = Tongs()
+    let query = ElastiQ()
         .range(\Recipe.cookTimeMin, [.lt(30), .gte(10)])
 
     printJSON(query)
@@ -51,7 +51,7 @@ do {
 print("----------------")
 
 do {
-    let query = Tongs()
+    let query = ElastiQ()
         .bool({ query in
             query.filter { filter in
                 filter
@@ -66,7 +66,7 @@ do {
 print("----------------")
 
 do {
-    let query = Tongs()
+    let query = ElastiQ()
         .bool({ query in
             query
                 .filter { filter in

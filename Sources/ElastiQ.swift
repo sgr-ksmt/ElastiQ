@@ -1,6 +1,6 @@
 //
-//  Tongs.swift
-//  Tongs
+//  ElastiQ.swift
+//  ElastiQ
 //
 //  Created by suguru-kishimoto on 2017/08/23.
 //  Copyright © 2017年 Suguru Kishimoto. All rights reserved.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public final class Tongs: HasSingleParameter {
+public final class ElastiQ: HasSingleParameter {
 
     public var parameter: QueryParameter?
 

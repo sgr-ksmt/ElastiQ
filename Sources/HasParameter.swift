@@ -1,6 +1,6 @@
 //
 //  NestedQuery.swift
-//  Tongs
+//  ElastiQ
 //
 //  Created by suguru-kishimoto on 2017/08/23.
 //  Copyright © 2017年 Suguru Kishimoto. All rights reserved.
@@ -14,7 +14,7 @@ public protocol HasParameter: class {
 
 extension HasParameter {
     public func term(_ key: String, _ value: QueryValue) -> Self {
-        add(Tongs.Parameter.Term(key: key, value: value))
+        add(ElastiQ.Parameter.Term(key: key, value: value))
         return self
     }
 
@@ -27,7 +27,7 @@ extension HasParameter {
     }
 
     public func terms(_ key: String, _ values: [QueryValue]) -> Self {
-        add(Tongs.Parameter.Terms(key: key, values: values))
+        add(ElastiQ.Parameter.Terms(key: key, values: values))
         return self
     }
 
@@ -39,28 +39,28 @@ extension HasParameter {
         return terms(keypath._kvcKeyPathString!, values)
     }
 
-    public func range(_ key: String, _ condition: Tongs.Parameter.Range.Condition) -> Self {
+    public func range(_ key: String, _ condition: ElastiQ.Parameter.Range.Condition) -> Self {
         return range(key, [condition])
     }
 
-    public func range<K, V: QueryNumberValue>(_ keypath: KeyPath<K, V>, _ condition: Tongs.Parameter.Range.Condition) -> Self {
+    public func range<K, V: QueryNumberValue>(_ keypath: KeyPath<K, V>, _ condition: ElastiQ.Parameter.Range.Condition) -> Self {
         return range(keypath._kvcKeyPathString!, condition)
     }
 
-    public func range<K, V: QueryNumberValue>(_ keypath: KeyPath<K, V?>, _ condition: Tongs.Parameter.Range.Condition) -> Self {
+    public func range<K, V: QueryNumberValue>(_ keypath: KeyPath<K, V?>, _ condition: ElastiQ.Parameter.Range.Condition) -> Self {
         return range(keypath._kvcKeyPathString!, condition)
     }
 
-    public func range(_ key: String, _ conditions: [Tongs.Parameter.Range.Condition]) -> Self {
-        add(Tongs.Parameter.Range(key: key, conditions: conditions))
+    public func range(_ key: String, _ conditions: [ElastiQ.Parameter.Range.Condition]) -> Self {
+        add(ElastiQ.Parameter.Range(key: key, conditions: conditions))
         return self
     }
 
-    public func range<K, V: QueryNumberValue>(_ keypath: KeyPath<K, V>, _ conditions: [Tongs.Parameter.Range.Condition]) -> Self {
+    public func range<K, V: QueryNumberValue>(_ keypath: KeyPath<K, V>, _ conditions: [ElastiQ.Parameter.Range.Condition]) -> Self {
         return range(keypath._kvcKeyPathString!, conditions)
     }
 
-    public func range<K, V: QueryNumberValue>(_ keypath: KeyPath<K, V?>, _ conditions: [Tongs.Parameter.Range.Condition]) -> Self {
+    public func range<K, V: QueryNumberValue>(_ keypath: KeyPath<K, V?>, _ conditions: [ElastiQ.Parameter.Range.Condition]) -> Self {
         return range(keypath._kvcKeyPathString!, conditions)
     }
 

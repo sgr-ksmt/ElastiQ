@@ -7,15 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		168723961F4D44BC00AC575A /* Tongs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1687238C1F4D44BC00AC575A /* Tongs.framework */; };
-		1687239B1F4D44BC00AC575A /* TongsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1687239A1F4D44BC00AC575A /* TongsTests.swift */; };
-		1687239D1F4D44BC00AC575A /* Tongs.h in Headers */ = {isa = PBXBuildFile; fileRef = 1687238F1F4D44BC00AC575A /* Tongs.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		168723961F4D44BC00AC575A /* ElastiQ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1687238C1F4D44BC00AC575A /* ElastiQ.framework */; };
 		1687DA361F4D608A0063757A /* BoolQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1687DA301F4D60800063757A /* BoolQuery.swift */; };
 		1687DA371F4D608A0063757A /* HasParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1687DA311F4D60800063757A /* HasParameter.swift */; };
 		1687DA381F4D608A0063757A /* Parameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1687DA321F4D60800063757A /* Parameter.swift */; };
 		1687DA391F4D608A0063757A /* ParameterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1687DA331F4D60800063757A /* ParameterProtocols.swift */; };
-		1687DA3A1F4D608A0063757A /* Tongs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1687DA341F4D60800063757A /* Tongs.swift */; };
 		1687DA3B1F4D608A0063757A /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1687DA351F4D60800063757A /* Value.swift */; };
+		90E30E711F4D86F2003BCDE1 /* ElastiQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E30E701F4D86F2003BCDE1 /* ElastiQ.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,18 +28,18 @@
 
 /* Begin PBXFileReference section */
 		1609B5D11F4D480500AD0093 /* ExamplePlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ExamplePlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		1687238C1F4D44BC00AC575A /* Tongs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Tongs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1687238F1F4D44BC00AC575A /* Tongs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tongs.h; sourceTree = "<group>"; };
-		168723901F4D44BC00AC575A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		168723951F4D44BC00AC575A /* TongsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TongsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1687239A1F4D44BC00AC575A /* TongsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TongsTests.swift; sourceTree = "<group>"; };
-		1687239C1F4D44BC00AC575A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1687238C1F4D44BC00AC575A /* ElastiQ.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ElastiQ.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		168723951F4D44BC00AC575A /* ElastiQTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ElastiQTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1687DA301F4D60800063757A /* BoolQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoolQuery.swift; sourceTree = "<group>"; };
 		1687DA311F4D60800063757A /* HasParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasParameter.swift; sourceTree = "<group>"; };
 		1687DA321F4D60800063757A /* Parameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameter.swift; sourceTree = "<group>"; };
 		1687DA331F4D60800063757A /* ParameterProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterProtocols.swift; sourceTree = "<group>"; };
-		1687DA341F4D60800063757A /* Tongs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tongs.swift; sourceTree = "<group>"; };
 		1687DA351F4D60800063757A /* Value.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Value.swift; sourceTree = "<group>"; };
+		90E30E701F4D86F2003BCDE1 /* ElastiQ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElastiQ.swift; sourceTree = "<group>"; };
+		90E30E731F4D8711003BCDE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90E30E741F4D8711003BCDE1 /* TongsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TongsTests.swift; sourceTree = "<group>"; };
+		90E30E761F4D8720003BCDE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90E30E771F4D8720003BCDE1 /* Tongs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tongs.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				168723961F4D44BC00AC575A /* Tongs.framework in Frameworks */,
+				168723961F4D44BC00AC575A /* ElastiQ.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,10 +64,10 @@
 		168723821F4D44BC00AC575A = {
 			isa = PBXGroup;
 			children = (
+				90E30E751F4D8720003BCDE1 /* ElastiQ */,
 				1609B5D11F4D480500AD0093 /* ExamplePlayground.playground */,
-				1687238E1F4D44BC00AC575A /* Tongs */,
 				1687DA2F1F4D60800063757A /* Sources */,
-				168723991F4D44BC00AC575A /* TongsTests */,
+				90E30E721F4D8711003BCDE1 /* ElastiQTests */,
 				1687238D1F4D44BC00AC575A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -77,41 +75,41 @@
 		1687238D1F4D44BC00AC575A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1687238C1F4D44BC00AC575A /* Tongs.framework */,
-				168723951F4D44BC00AC575A /* TongsTests.xctest */,
+				1687238C1F4D44BC00AC575A /* ElastiQ.framework */,
+				168723951F4D44BC00AC575A /* ElastiQTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		1687238E1F4D44BC00AC575A /* Tongs */ = {
-			isa = PBXGroup;
-			children = (
-				1687238F1F4D44BC00AC575A /* Tongs.h */,
-				168723901F4D44BC00AC575A /* Info.plist */,
-			);
-			path = Tongs;
-			sourceTree = "<group>";
-		};
-		168723991F4D44BC00AC575A /* TongsTests */ = {
-			isa = PBXGroup;
-			children = (
-				1687239A1F4D44BC00AC575A /* TongsTests.swift */,
-				1687239C1F4D44BC00AC575A /* Info.plist */,
-			);
-			path = TongsTests;
 			sourceTree = "<group>";
 		};
 		1687DA2F1F4D60800063757A /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				90E30E701F4D86F2003BCDE1 /* ElastiQ.swift */,
 				1687DA301F4D60800063757A /* BoolQuery.swift */,
 				1687DA311F4D60800063757A /* HasParameter.swift */,
 				1687DA321F4D60800063757A /* Parameter.swift */,
 				1687DA331F4D60800063757A /* ParameterProtocols.swift */,
-				1687DA341F4D60800063757A /* Tongs.swift */,
 				1687DA351F4D60800063757A /* Value.swift */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		90E30E721F4D8711003BCDE1 /* ElastiQTests */ = {
+			isa = PBXGroup;
+			children = (
+				90E30E731F4D8711003BCDE1 /* Info.plist */,
+				90E30E741F4D8711003BCDE1 /* TongsTests.swift */,
+			);
+			path = ElastiQTests;
+			sourceTree = "<group>";
+		};
+		90E30E751F4D8720003BCDE1 /* ElastiQ */ = {
+			isa = PBXGroup;
+			children = (
+				90E30E761F4D8720003BCDE1 /* Info.plist */,
+				90E30E771F4D8720003BCDE1 /* Tongs.h */,
+			);
+			path = ElastiQ;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -121,16 +119,15 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1687239D1F4D44BC00AC575A /* Tongs.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1687238B1F4D44BC00AC575A /* Tongs */ = {
+		1687238B1F4D44BC00AC575A /* ElastiQ */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 168723A01F4D44BC00AC575A /* Build configuration list for PBXNativeTarget "Tongs" */;
+			buildConfigurationList = 168723A01F4D44BC00AC575A /* Build configuration list for PBXNativeTarget "ElastiQ" */;
 			buildPhases = (
 				168723871F4D44BC00AC575A /* Sources */,
 				168723881F4D44BC00AC575A /* Frameworks */,
@@ -141,14 +138,14 @@
 			);
 			dependencies = (
 			);
-			name = Tongs;
+			name = ElastiQ;
 			productName = Tongs;
-			productReference = 1687238C1F4D44BC00AC575A /* Tongs.framework */;
+			productReference = 1687238C1F4D44BC00AC575A /* ElastiQ.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		168723941F4D44BC00AC575A /* TongsTests */ = {
+		168723941F4D44BC00AC575A /* ElastiQTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 168723A31F4D44BC00AC575A /* Build configuration list for PBXNativeTarget "TongsTests" */;
+			buildConfigurationList = 168723A31F4D44BC00AC575A /* Build configuration list for PBXNativeTarget "ElastiQTests" */;
 			buildPhases = (
 				168723911F4D44BC00AC575A /* Sources */,
 				168723921F4D44BC00AC575A /* Frameworks */,
@@ -159,9 +156,9 @@
 			dependencies = (
 				168723981F4D44BC00AC575A /* PBXTargetDependency */,
 			);
-			name = TongsTests;
+			name = ElastiQTests;
 			productName = TongsTests;
-			productReference = 168723951F4D44BC00AC575A /* TongsTests.xctest */;
+			productReference = 168723951F4D44BC00AC575A /* ElastiQTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -185,7 +182,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 168723861F4D44BC00AC575A /* Build configuration list for PBXProject "Tongs" */;
+			buildConfigurationList = 168723861F4D44BC00AC575A /* Build configuration list for PBXProject "ElastiQ" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -197,8 +194,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1687238B1F4D44BC00AC575A /* Tongs */,
-				168723941F4D44BC00AC575A /* TongsTests */,
+				1687238B1F4D44BC00AC575A /* ElastiQ */,
+				168723941F4D44BC00AC575A /* ElastiQTests */,
 			);
 		};
 /* End PBXProject section */
@@ -226,8 +223,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1687DA381F4D608A0063757A /* Parameter.swift in Sources */,
+				90E30E711F4D86F2003BCDE1 /* ElastiQ.swift in Sources */,
 				1687DA391F4D608A0063757A /* ParameterProtocols.swift in Sources */,
-				1687DA3A1F4D608A0063757A /* Tongs.swift in Sources */,
 				1687DA371F4D608A0063757A /* HasParameter.swift in Sources */,
 				1687DA361F4D608A0063757A /* BoolQuery.swift in Sources */,
 				1687DA3B1F4D608A0063757A /* Value.swift in Sources */,
@@ -238,7 +235,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1687239B1F4D44BC00AC575A /* TongsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,7 +243,7 @@
 /* Begin PBXTargetDependency section */
 		168723981F4D44BC00AC575A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1687238B1F4D44BC00AC575A /* Tongs */;
+			target = 1687238B1F4D44BC00AC575A /* ElastiQ */;
 			targetProxy = 168723971F4D44BC00AC575A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -376,10 +372,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Tongs/Info.plist;
+				INFOPLIST_FILE = ElastiQ/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "-.Tongs";
+				PRODUCT_BUNDLE_IDENTIFIER = "-.ElastiQ";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -398,10 +394,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Tongs/Info.plist;
+				INFOPLIST_FILE = ElastiQ/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "-.Tongs";
+				PRODUCT_BUNDLE_IDENTIFIER = "-.ElastiQ";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -414,9 +410,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = TongsTests/Info.plist;
+				INFOPLIST_FILE = ElastiQTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "-.TongsTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "-.ElastiQTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -428,9 +424,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = TongsTests/Info.plist;
+				INFOPLIST_FILE = ElastiQTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "-.TongsTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "-.ElastiQTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -440,7 +436,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		168723861F4D44BC00AC575A /* Build configuration list for PBXProject "Tongs" */ = {
+		168723861F4D44BC00AC575A /* Build configuration list for PBXProject "ElastiQ" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1687239E1F4D44BC00AC575A /* Debug */,
@@ -449,7 +445,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		168723A01F4D44BC00AC575A /* Build configuration list for PBXNativeTarget "Tongs" */ = {
+		168723A01F4D44BC00AC575A /* Build configuration list for PBXNativeTarget "ElastiQ" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				168723A11F4D44BC00AC575A /* Debug */,
@@ -458,7 +454,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		168723A31F4D44BC00AC575A /* Build configuration list for PBXNativeTarget "TongsTests" */ = {
+		168723A31F4D44BC00AC575A /* Build configuration list for PBXNativeTarget "ElastiQTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				168723A41F4D44BC00AC575A /* Debug */,

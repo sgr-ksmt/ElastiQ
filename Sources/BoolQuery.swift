@@ -1,6 +1,6 @@
 //
 //  BoolQuery.swift
-//  Tongs
+//  ElastiQ
 //
 //  Created by suguru-kishimoto on 2017/08/23.
 //  Copyright © 2017年 Suguru Kishimoto. All rights reserved.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Tongs {
+extension ElastiQ {
     public final class BoolQuery: QueryParameter {
         public let parameterName: String = "bool"
 
@@ -40,7 +40,7 @@ extension Tongs {
     }
 }
 
-extension Tongs.BoolQuery {
+extension ElastiQ.BoolQuery {
     public final class Filter: BoolQueryParameter {
         public let queryName: String = "filter"
         public var parameters: [QueryParameter] = []

@@ -1,6 +1,6 @@
 //
 //  ParameterProtocols.swift
-//  Tongs
+//  ElastiQ
 //
 //  Created by suguru-kishimoto on 2017/08/23.
 //  Copyright © 2017年 Suguru Kishimoto. All rights reserved.

@@ -1,15 +1,15 @@
 //
-//  TongsTests.swift
-//  TongsTests
+//  ElastiQTests.swift
+//  ElastiQTests
 //
 //  Created by suguru-kishimoto on 2017/08/23.
 //  Copyright © 2017年 Suguru Kishimoto. All rights reserved.
 //
 
 import XCTest
-@testable import Tongs
+@testable import ElastiQ
 
-class TongsTests: XCTestCase {
+class ElastiQTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

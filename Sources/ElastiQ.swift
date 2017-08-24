@@ -16,7 +16,7 @@ public final class ElastiQ: HasSingleParameter {
 
     }
     
-    private var body: Any {
+    public var body: Any {
         return parameter.map { ["query": [$0.parameterName: $0.body]] } ?? [:]
     }
 

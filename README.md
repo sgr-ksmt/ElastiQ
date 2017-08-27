@@ -92,7 +92,7 @@ print(String(data: json, encoding: .utf8))
 - Add the following to your *Cartfile*:
 
 ```bash
-github "sgr-ksmt/ElastiQ" ~> 0.1
+github "sgr-ksmt/ElastiQ" ~> 0.3
 ```
 
 - Run `carthage update`
@@ -106,7 +106,7 @@ github "sgr-ksmt/ElastiQ" ~> 0.1
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'ElastiQ', '~> 0.1'
+pod 'ElastiQ', '~> 0.3'
 ```
 
 and run `pod install`

@@ -15,6 +15,12 @@ extension ElastiQ {
         public var parameters: [QueryParameter] = []
 
         @discardableResult
+        public func query(_ configurationBlock: ParameterConfigurationBlock<Query>) -> Self{
+            add(Query(), configurationBlock: configurationBlock)
+            return self
+        }
+        
+        @discardableResult
         public func boost(_ value: QueryNumberValue) -> Self {
             add(ElastiQ.Parameter.Boost(value: value))
             return self

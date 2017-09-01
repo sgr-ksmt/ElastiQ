@@ -95,3 +95,10 @@ do {
 
 print("----------------")
 
+do {
+    let query = ElastiQ().functionalScore({ functionalScore in
+        
+    })
+    printJSON(query)
+}
+

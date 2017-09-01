@@ -11,27 +11,37 @@ import Foundation
 extension ElastiQ {
     public final class BoolQuery: QueryParameter {
         public let parameterName: String = "bool"
+        public typealias ParameterBlock<T> = (T) -> Void
 
         private var queries: [BoolQueryParameter] = []
 
-        public func filter(_ block: (Filter) -> Filter) -> Self {
-            queries.append(block(Filter()))
+        @discardableResult
+        public func filter(_ block: ParameterBlock<Filter>) -> Self {
+            _append(Filter(), block)
             return self
         }
 
-        public func must(_ block: (Must) -> Must) -> Self {
-            queries.append(block(Must()))
+        @discardableResult
+        public func must(_ block: ParameterBlock<Must>) -> Self {
+            _append(Must(), block)
             return self
         }
 
-        public func should(_ block: (Should) -> Should) -> Self {
-            queries.append(block(Should()))
+        @discardableResult
+        public func should(_ block: ParameterBlock<Should>) -> Self {
+            _append(Should(), block)
             return self
         }
 
-        public func mustNot(_ block: (MustNot) -> MustNot) -> Self {
-            queries.append(block(MustNot()))
+        @discardableResult
+        public func mustNot(_ block: ParameterBlock<MustNot>) -> Self {
+            _append(MustNot(), block)
             return self
+        }
+
+        private func _append<T: BoolQueryParameter>(_ param: T, _ block: ParameterBlock<T>) {
+            block(param)
+            queries.append(param)
         }
 
         public var body: Any {

@@ -9,7 +9,7 @@
 import Foundation
 
 public final class ElastiQ: HasSingleParameter {
-    public typealias ParameterBlock<T> = (T) -> T
+    public typealias ParameterBlock<T> = (T) -> Void
     public var parameter: QueryParameter?
 
     public init() {
@@ -20,14 +20,21 @@ public final class ElastiQ: HasSingleParameter {
         return parameter.map { ["query": [$0.parameterName: $0.body]] } ?? [:]
     }
 
+    @discardableResult
     public func bool(_ block: ParameterBlock<BoolQuery>) -> Self {
-        add(block(BoolQuery()))
+        _add(BoolQuery(), block)
         return self
     }
 
+    @discardableResult
     public func functionalScore(_ block: ParameterBlock<FunctionalScore>) -> Self {
-        add(block(FunctionalScore()))
+        _add(FunctionalScore(), block)
         return self
+    }
+
+    private func _add<T: QueryParameter>(_ param: T, _ block: ParameterBlock<T>) {
+        block(param)
+        add(param)
     }
 
     public func json() throws -> Data {

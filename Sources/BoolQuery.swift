@@ -8,66 +8,69 @@
 
 import Foundation
 
-extension ElastiQ {
-    public final class BoolQuery: QueryParameter {
+extension Query {
+    public final class BoolQuery: QueryParameter, HaveMultipleParameters {
         public let parameterName: String = "bool"
         public typealias ParameterBlock<T> = (T) -> Void
-
-        private var queries: [BoolQueryParameter] = []
+        public var parameters: [QueryParameter] = []
+//        public var parameters: [QueryParameter] {
+//            get {
+//                return queries
+//            }
+//            set {
+//                self.queries = newValue.flatMap( { $0 as? BoolQueryParameter })
+//            }
+//        }
+//        var queries: [BoolQueryParameter] = []
 
         @discardableResult
-        public func filter(_ block: ParameterBlock<Filter>) -> Self {
-            _append(Filter(), block)
+        public func filter(_ configurationBlock: ParameterConfigurationBlock<Filter>) -> Self {
+            add(Filter(), configurationBlock: configurationBlock)
             return self
         }
 
         @discardableResult
-        public func must(_ block: ParameterBlock<Must>) -> Self {
-            _append(Must(), block)
+        public func must(_ configurationBlock: ParameterConfigurationBlock<Must>) -> Self {
+            add(Must(), configurationBlock: configurationBlock)
             return self
         }
 
         @discardableResult
-        public func should(_ block: ParameterBlock<Should>) -> Self {
-            _append(Should(), block)
+        public func should(_ configurationBlock: ParameterConfigurationBlock<Should>) -> Self {
+            add(Should(), configurationBlock: configurationBlock)
             return self
         }
 
         @discardableResult
-        public func mustNot(_ block: ParameterBlock<MustNot>) -> Self {
-            _append(MustNot(), block)
+        public func mustNot(_ configurationBlock: ParameterConfigurationBlock<MustNot>) -> Self {
+            add(MustNot(), configurationBlock: configurationBlock)
             return self
-        }
-
-        private func _append<T: BoolQueryParameter>(_ param: T, _ block: ParameterBlock<T>) {
-            block(param)
-            queries.append(param)
         }
 
         public var body: Any {
-            return Dictionary(uniqueKeysWithValues: queries.map { ($0.queryName, $0.body) })
+            return Dictionary(uniqueKeysWithValues: parameters.map { ($0.parameterName, $0.body) })
         }
     }
 }
 
-extension ElastiQ.BoolQuery {
+extension Query.BoolQuery {
     public final class Filter: BoolQueryParameter {
-        public let queryName: String = "filter"
+        public let parameterName: String = "filter"
         public var parameters: [QueryParameter] = []
     }
 
     public final class Must: BoolQueryParameter {
-        public let queryName: String = "must"
+        public let parameterName: String = "must"
         public var parameters: [QueryParameter] = []
     }
 
     public final class Should: BoolQueryParameter {
-        public let queryName: String = "should"
+        public let parameterName: String = "should"
         public var parameters: [QueryParameter] = []
     }
 
     public final class MustNot: BoolQueryParameter {
-        public let queryName: String = "must_not"
+        public let parameterName: String = "must_not"
         public var parameters: [QueryParameter] = []
     }
 }

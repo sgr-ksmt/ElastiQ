@@ -8,36 +8,25 @@
 
 import Foundation
 
-public final class ElastiQ: HasSingleParameter {
-    public typealias ParameterBlock<T> = (T) -> Void
-    public var parameter: QueryParameter?
+public typealias ParameterConfigurationBlock<T> = (T) -> Void
 
-    public init() {
+public final class ElastiQ: HaveMultipleParameters {
+    public var parameters: [QueryParameter] = []
 
-    }
+    public init() {}
     
+    @discardableResult
+    public func query(_ configurationBlock: ParameterConfigurationBlock<Query>) -> Self {
+        add(Query(), configurationBlock: configurationBlock)
+        return self
+    }
+
     public var body: Any {
-        return parameter.map { ["query": [$0.parameterName: $0.body]] } ?? [:]
-    }
-
-    @discardableResult
-    public func bool(_ block: ParameterBlock<BoolQuery>) -> Self {
-        _add(BoolQuery(), block)
-        return self
-    }
-
-    @discardableResult
-    public func functionalScore(_ block: ParameterBlock<FunctionalScore>) -> Self {
-        _add(FunctionalScore(), block)
-        return self
-    }
-
-    private func _add<T: QueryParameter>(_ param: T, _ block: ParameterBlock<T>) {
-        block(param)
-        add(param)
+        return Dictionary(uniqueKeysWithValues: parameters.map { ($0.parameterName, $0.body) })
     }
 
     public func json() throws -> Data {
         return try JSONSerialization.data(withJSONObject: body, options: .prettyPrinted)
     }
 }
+

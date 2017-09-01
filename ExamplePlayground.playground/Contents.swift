@@ -15,8 +15,9 @@ func printJSON(_ query: ElastiQ) {
 }
 
 do {
-    let query = ElastiQ()
-        .term(\Recipe.cookTimeMin, 10)
+    let query = ElastiQ().query {
+        $0.term(\Recipe.cookTimeMin, 10)
+    }
 
     printJSON(query)
 }
@@ -24,8 +25,9 @@ do {
 print("----------------")
 
 do {
-    let query = ElastiQ()
-        .terms(\Recipe.cookTimeMin, [10, 15, 20])
+    let query = ElastiQ().query {
+        $0.terms(\Recipe.cookTimeMin, [10, 15, 20])
+    }
 
     printJSON(query)
 }
@@ -33,9 +35,9 @@ do {
 print("----------------")
 
 do {
-    let query = ElastiQ()
-        .range(\Recipe.cookTimeMin, .lt(10))
-
+    let query = ElastiQ().query {
+        $0.range(\Recipe.cookTimeMin, .lt(10))
+    }
     printJSON(query)
 }
 
@@ -51,14 +53,15 @@ do {
 print("----------------")
 
 do {
-    let query = ElastiQ()
-        .bool({ query in
+    let query = ElastiQ().query {
+        $0.bool({ query in
             query.filter { filter in
                 filter
                     .term(\Recipe.title, "bean")
                     .range(\Recipe.cookTimeMin, .lt(30))
             }
         })
+    }
 
     printJSON(query)
 }
@@ -66,8 +69,8 @@ do {
 print("----------------")
 
 do {
-    let query = ElastiQ()
-        .bool({ query in
+    let query = ElastiQ().query {
+        $0.bool({ query in
             query
                 .filter { filter in
                     filter
@@ -90,15 +93,23 @@ do {
                         .range(\Recipe.cookTimeMin, .lt(30))
             }
         })
+    }
     printJSON(query)
 }
 
 print("----------------")
 
 do {
-    let query = ElastiQ().functionalScore({ functionalScore in
-        
-    })
+    let query = ElastiQ().query {
+        $0.functionalScore({ functionalScore in
+            functionalScore
+                .boost(5)
+                .maxBoost(42)
+                .minScore(42)
+                .scoreMode(.max)
+                .boostMode(.multiply)
+        })
+    }
     printJSON(query)
 }
 

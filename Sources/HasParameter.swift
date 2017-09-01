@@ -9,7 +9,8 @@
 import Foundation
 
 public protocol HasParameter: class {
-    func add(_ parameter: QueryParameter)
+    func add<T: QueryParameter>(_ parameter: T)
+    func add<T: QueryParameter>(_ parameter: T, configurationBlock: ParameterConfigurationBlock<T>)
 }
 
 extension HasParameter {

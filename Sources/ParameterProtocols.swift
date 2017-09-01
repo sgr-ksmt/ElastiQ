@@ -18,7 +18,12 @@ public protocol HasSingleParameter: HasParameter {
 }
 
 extension HasSingleParameter {
-    public func add(_ parameter: QueryParameter) {
+    public func add<T: QueryParameter>(_ parameter: T) {
+        self.parameter = parameter
+    }
+
+    public func add<T: QueryParameter>(_ parameter: T, configurationBlock: ParameterConfigurationBlock<T>) {
+        configurationBlock(parameter)
         self.parameter = parameter
     }
 }
@@ -28,14 +33,17 @@ public protocol HaveMultipleParameters: HasParameter {
 }
 
 extension HaveMultipleParameters {
-    public func add(_ parameter: QueryParameter) {
+    public func add<T: QueryParameter>(_ parameter: T) {
+        self.parameters.append(parameter)
+    }
+
+    public func add<T: QueryParameter>(_ parameter: T, configurationBlock: ParameterConfigurationBlock<T>) {
+        configurationBlock(parameter)
         self.parameters.append(parameter)
     }
 }
 
-public protocol BoolQueryParameter: HaveMultipleParameters {
-    var queryName: String { get }
-    var body: Any { get }
+public protocol BoolQueryParameter: QueryParameter, HaveMultipleParameters {
 }
 
 extension BoolQueryParameter {

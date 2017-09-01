@@ -15,7 +15,7 @@ extension ElastiQ {
         public struct Term: QueryParameter {
             public let parameterName: String = "term"
             public let key: String
-            public let value: Any
+            public let value: QueryValue
 
             public var body: Any {
                 return [key: value]
@@ -25,7 +25,7 @@ extension ElastiQ {
         public struct Terms: QueryParameter {
             public let parameterName: String = "terms"
             public let key: String
-            public let values: [Any]
+            public let values: [QueryValue]
 
             public var body: Any {
                 return [key: values]

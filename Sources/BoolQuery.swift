@@ -8,20 +8,11 @@
 
 import Foundation
 
-extension Query {
+extension ElastiQ {
     public final class BoolQuery: QueryParameter, HaveMultipleParameters {
         public let parameterName: String = "bool"
         public typealias ParameterBlock<T> = (T) -> Void
         public var parameters: [QueryParameter] = []
-//        public var parameters: [QueryParameter] {
-//            get {
-//                return queries
-//            }
-//            set {
-//                self.queries = newValue.flatMap( { $0 as? BoolQueryParameter })
-//            }
-//        }
-//        var queries: [BoolQueryParameter] = []
 
         @discardableResult
         public func filter(_ configurationBlock: ParameterConfigurationBlock<Filter>) -> Self {
@@ -53,7 +44,7 @@ extension Query {
     }
 }
 
-extension Query.BoolQuery {
+extension ElastiQ.BoolQuery {
     public final class Filter: BoolQueryParameter {
         public let parameterName: String = "filter"
         public var parameters: [QueryParameter] = []

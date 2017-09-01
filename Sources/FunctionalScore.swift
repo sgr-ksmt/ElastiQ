@@ -8,47 +8,49 @@
 
 import Foundation
 
-public final class FunctionalScore: QueryParameter, HaveMultipleParameters {
-    public let parameterName: String = "functional_score"
+extension ElastiQ {
+    public final class FunctionalScore: QueryParameter, HaveMultipleParameters {
+        public let parameterName: String = "functional_score"
 
-    public var parameters: [QueryParameter] = []
+        public var parameters: [QueryParameter] = []
 
-    @discardableResult
-    public func boost(_ value: QueryNumberValue) -> Self {
-        add(FunctionalScore.Parameter.Boost(value: value))
-        return self
-    }
+        @discardableResult
+        public func boost(_ value: QueryNumberValue) -> Self {
+            add(FunctionalScore.Parameter.Boost(value: value))
+            return self
+        }
 
-    @discardableResult
-    public func maxBoost(_ value: QueryNumberValue) -> Self {
-        add(FunctionalScore.Parameter.MaxBoost(value: value))
-        return self
-    }
+        @discardableResult
+        public func maxBoost(_ value: QueryNumberValue) -> Self {
+            add(FunctionalScore.Parameter.MaxBoost(value: value))
+            return self
+        }
 
-    @discardableResult
-    public func minScore(_ value: QueryNumberValue) -> Self {
-        add(FunctionalScore.Parameter.MinScore(value: value))
-        return self
-    }
+        @discardableResult
+        public func minScore(_ value: QueryNumberValue) -> Self {
+            add(FunctionalScore.Parameter.MinScore(value: value))
+            return self
+        }
 
-    @discardableResult
-    public func scoreMode(_ mode: FunctionalScore.Parameter.ScoreMode.Mode) -> Self {
-        add(FunctionalScore.Parameter.ScoreMode(mode: mode))
-        return self
-    }
+        @discardableResult
+        public func scoreMode(_ mode: FunctionalScore.Parameter.ScoreMode.Mode) -> Self {
+            add(FunctionalScore.Parameter.ScoreMode(mode: mode))
+            return self
+        }
 
-    @discardableResult
-    public func boostMode(_ mode: FunctionalScore.Parameter.BoostMode.Mode) -> Self {
-        add(FunctionalScore.Parameter.BoostMode(mode: mode))
-        return self
-    }
+        @discardableResult
+        public func boostMode(_ mode: FunctionalScore.Parameter.BoostMode.Mode) -> Self {
+            add(FunctionalScore.Parameter.BoostMode(mode: mode))
+            return self
+        }
 
-    public var body: Any {
-        return Dictionary(uniqueKeysWithValues: parameters.map { ($0.parameterName, $0.body) })
+        public var body: Any {
+            return Dictionary(uniqueKeysWithValues: parameters.map { ($0.parameterName, $0.body) })
+        }
     }
 }
 
-extension FunctionalScore {
+extension ElastiQ.FunctionalScore {
     public struct Parameter {
         private init() {}
 

@@ -14,8 +14,10 @@ extension ElastiQ {
 
         public var parameter: QueryParameter?
 
-        public var body: Any {
-            return parameter.map { [$0.parameterName: $0.body] } ?? [:]
+        @discardableResult
+        public func matchAll(_ configurationBlock: ParameterConfigurationBlock<MatchAll> = { _ in }) -> Self {
+            add(MatchAll(), configurationBlock: configurationBlock)
+            return self
         }
 
         @discardableResult

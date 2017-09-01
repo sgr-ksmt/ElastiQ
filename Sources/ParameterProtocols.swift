@@ -26,6 +26,10 @@ extension HasSingleParameter {
         configurationBlock(parameter)
         self.parameter = parameter
     }
+
+    public var body: Any {
+        return parameter.map { [$0.parameterName: $0.body] } ?? [:]
+    }
 }
 
 public protocol HaveMultipleParameters: HasParameter {

@@ -103,6 +103,7 @@ do {
     let query = ElastiQ().query {
         $0.functionalScore({ functionalScore in
             functionalScore
+                .query { $0.matchAll() }
                 .boost(5)
                 .maxBoost(42)
                 .minScore(42)
@@ -119,7 +120,7 @@ do {
     let query = ElastiQ()
         .from(5)
         .size(10)
-        .query({ _ in })
+        .query { $0.matchAll() }
 
     printJSON(query)
 }

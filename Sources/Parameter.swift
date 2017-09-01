@@ -58,5 +58,67 @@ extension ElastiQ {
                 return [key: Dictionary(uniqueKeysWithValues: conditions.map { ($0.element.key, $0.element.value) })]
             }
         }
+
+        public struct Boost: QueryParameter {
+            public let parameterName: String = "boost"
+            public let value: QueryNumberValue
+
+            public var body: Any {
+                return value
+            }
+        }
+
+        public struct MaxBoost: QueryParameter {
+            public let parameterName: String = "max_boost"
+            public let value: QueryNumberValue
+
+            public var body: Any {
+                return value
+            }
+        }
+
+        public struct MinScore: QueryParameter {
+            public let parameterName: String = "min_score"
+            public let value: QueryNumberValue
+
+            public var body: Any {
+                return value
+            }
+        }
+
+        public struct ScoreMode: QueryParameter {
+            public let parameterName: String = "score_mode"
+            public enum Mode: String {
+                case multiply
+                case sum
+                case avg
+                case first
+                case max
+                case min
+            }
+            let mode: Mode
+
+            public var body: Any {
+                return mode.rawValue
+            }
+        }
+
+        public struct BoostMode: QueryParameter {
+            public let parameterName: String = "boost_mode"
+            public enum Mode: String {
+                case multiply
+                case replace
+                case sum
+                case avg
+                case max
+                case min
+            }
+
+            let mode: Mode
+
+            public var body: Any {
+                return mode.rawValue
+            }
+        }
     }
 }

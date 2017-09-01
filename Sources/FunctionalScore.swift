@@ -16,31 +16,31 @@ extension ElastiQ {
 
         @discardableResult
         public func boost(_ value: QueryNumberValue) -> Self {
-            add(FunctionalScore.Parameter.Boost(value: value))
+            add(ElastiQ.Parameter.Boost(value: value))
             return self
         }
 
         @discardableResult
         public func maxBoost(_ value: QueryNumberValue) -> Self {
-            add(FunctionalScore.Parameter.MaxBoost(value: value))
+            add(ElastiQ.Parameter.MaxBoost(value: value))
             return self
         }
 
         @discardableResult
         public func minScore(_ value: QueryNumberValue) -> Self {
-            add(FunctionalScore.Parameter.MinScore(value: value))
+            add(ElastiQ.Parameter.MinScore(value: value))
             return self
         }
 
         @discardableResult
-        public func scoreMode(_ mode: FunctionalScore.Parameter.ScoreMode.Mode) -> Self {
-            add(FunctionalScore.Parameter.ScoreMode(mode: mode))
+        public func scoreMode(_ mode: ElastiQ.Parameter.ScoreMode.Mode) -> Self {
+            add(ElastiQ.Parameter.ScoreMode(mode: mode))
             return self
         }
 
         @discardableResult
-        public func boostMode(_ mode: FunctionalScore.Parameter.BoostMode.Mode) -> Self {
-            add(FunctionalScore.Parameter.BoostMode(mode: mode))
+        public func boostMode(_ mode: ElastiQ.Parameter.BoostMode.Mode) -> Self {
+            add(ElastiQ.Parameter.BoostMode(mode: mode))
             return self
         }
 
@@ -50,71 +50,3 @@ extension ElastiQ {
     }
 }
 
-extension ElastiQ.FunctionalScore {
-    public struct Parameter {
-        private init() {}
-
-        public struct Boost: QueryParameter {
-            public let parameterName: String = "boost"
-            public let value: QueryNumberValue
-
-            public var body: Any {
-                return value
-            }
-        }
-
-        public struct MaxBoost: QueryParameter {
-            public let parameterName: String = "max_boost"
-            public let value: QueryNumberValue
-
-            public var body: Any {
-                return value
-            }
-        }
-
-        public struct MinScore: QueryParameter {
-            public let parameterName: String = "min_score"
-            public let value: QueryNumberValue
-
-            public var body: Any {
-                return value
-            }
-        }
-
-        public struct ScoreMode: QueryParameter {
-            public let parameterName: String = "score_mode"
-            public enum Mode: String {
-                case multiply
-                case sum
-                case avg
-                case first
-                case max
-                case min
-            }
-            let mode: Mode
-
-            public var body: Any {
-                return mode.rawValue
-            }
-        }
-
-        public struct BoostMode: QueryParameter {
-            public let parameterName: String = "boost_mode"
-            public enum Mode: String {
-                case multiply
-                case replace
-                case sum
-                case avg
-                case max
-                case min
-            }
-
-            let mode: Mode
-
-            public var body: Any {
-                return mode.rawValue
-            }
-        }
-
-    }
-}

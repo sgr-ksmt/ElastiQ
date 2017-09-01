@@ -113,3 +113,13 @@ do {
     printJSON(query)
 }
 
+print("----------------")
+
+do {
+    let query = ElastiQ()
+        .from(5)
+        .size(10)
+        .query({ _ in })
+
+    printJSON(query)
+}

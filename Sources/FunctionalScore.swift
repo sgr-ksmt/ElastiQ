@@ -19,7 +19,7 @@ extension ElastiQ {
             add(Query(), configurationBlock: configurationBlock)
             return self
         }
-        
+
         @discardableResult
         public func boost(_ value: QueryNumberValue) -> Self {
             add(ElastiQ.Parameter.Boost(value: value))

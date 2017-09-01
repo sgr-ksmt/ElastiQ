@@ -12,6 +12,25 @@ extension ElastiQ {
     public struct Parameter {
         private init() {}
 
+        public struct From: QueryParameter {
+            public let parameterName: String = "from"
+            public let value: QueryNumberValue
+
+            public var body: Any {
+                return value
+            }
+        }
+
+        public struct Size: QueryParameter {
+            public let parameterName: String = "size"
+            public let value: QueryNumberValue
+
+            public var body: Any {
+                return value
+            }
+        }
+
+
         public struct Term: QueryParameter {
             public let parameterName: String = "term"
             public let key: String

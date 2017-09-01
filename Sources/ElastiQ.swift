@@ -14,7 +14,19 @@ public final class ElastiQ: HaveMultipleParameters {
     public var parameters: [QueryParameter] = []
 
     public init() {}
-    
+
+    @discardableResult
+    public func from(_ value: QueryNumberValue) -> Self {
+        add(ElastiQ.Parameter.From(value: value))
+        return self
+    }
+
+    @discardableResult
+    public func size(_ value: QueryNumberValue) -> Self {
+        add(ElastiQ.Parameter.Size(value: value))
+        return self
+    }
+
     @discardableResult
     public func query(_ configurationBlock: ParameterConfigurationBlock<Query>) -> Self {
         add(Query(), configurationBlock: configurationBlock)

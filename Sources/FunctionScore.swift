@@ -1,5 +1,5 @@
 //
-//  FunctionalScore.swift
+//  FunctionScore.swift
 //  ElastiQ
 //
 //  Created by suguru-kishimoto on 2017/09/01.
@@ -9,8 +9,8 @@
 import Foundation
 
 extension ElastiQ {
-    public final class FunctionalScore: QueryParameter, HaveMultipleParameters {
-        public let parameterName: String = "functional_score"
+    public final class FunctionScore: QueryParameter, HaveMultipleParameters {
+        public let parameterName: String = "function_score"
 
         public var parameters: [QueryParameter] = []
 

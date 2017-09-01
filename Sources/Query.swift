@@ -27,8 +27,8 @@ extension ElastiQ {
         }
 
         @discardableResult
-        public func functionalScore(_ configurationBlock: ParameterConfigurationBlock<FunctionalScore>) -> Self {
-            add(FunctionalScore(), configurationBlock: configurationBlock)
+        public func functionScore(_ configurationBlock: ParameterConfigurationBlock<FunctionScore>) -> Self {
+            add(FunctionScore(), configurationBlock: configurationBlock)
             return self
         }
     }

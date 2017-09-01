@@ -101,8 +101,8 @@ print("----------------")
 
 do {
     let query = ElastiQ().query {
-        $0.functionalScore({ functionalScore in
-            functionalScore
+        $0.functionScore({ functionScore in
+            functionScore
                 .query { $0.matchAll() }
                 .boost(5)
                 .maxBoost(42)

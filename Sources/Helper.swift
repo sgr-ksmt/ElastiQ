@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+public typealias ParameterConfigurationBlock<T> = (T) -> Void
+
+internal func addParameter<T>(_ param: T, _ add: (T) -> Void, configurationBlock: ParameterConfigurationBlock<T>) {
+    configurationBlock(param)
+    add(param)
+}

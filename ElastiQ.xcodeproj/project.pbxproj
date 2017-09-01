@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		160B0E171F59283C000E3BDA /* FunctionalScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160B0E161F59283C000E3BDA /* FunctionalScore.swift */; };
 		168723961F4D44BC00AC575A /* ElastiQ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1687238C1F4D44BC00AC575A /* ElastiQ.framework */; };
 		1687DA361F4D608A0063757A /* BoolQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1687DA301F4D60800063757A /* BoolQuery.swift */; };
 		1687DA371F4D608A0063757A /* HasParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1687DA311F4D60800063757A /* HasParameter.swift */; };
@@ -22,12 +23,13 @@
 			containerPortal = 168723831F4D44BC00AC575A /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 1687238B1F4D44BC00AC575A;
-			remoteInfo = Tongs;
+			remoteInfo = ElastiQ;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1609B5D11F4D480500AD0093 /* ExamplePlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ExamplePlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		160B0E161F59283C000E3BDA /* FunctionalScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionalScore.swift; sourceTree = "<group>"; };
 		1687238C1F4D44BC00AC575A /* ElastiQ.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ElastiQ.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		168723951F4D44BC00AC575A /* ElastiQTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ElastiQTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1687DA301F4D60800063757A /* BoolQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoolQuery.swift; sourceTree = "<group>"; };
@@ -37,9 +39,9 @@
 		1687DA351F4D60800063757A /* Value.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Value.swift; sourceTree = "<group>"; };
 		90E30E701F4D86F2003BCDE1 /* ElastiQ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElastiQ.swift; sourceTree = "<group>"; };
 		90E30E731F4D8711003BCDE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		90E30E741F4D8711003BCDE1 /* TongsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TongsTests.swift; sourceTree = "<group>"; };
+		90E30E741F4D8711003BCDE1 /* ElastiQTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElastiQTests.swift; sourceTree = "<group>"; };
 		90E30E761F4D8720003BCDE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		90E30E771F4D8720003BCDE1 /* Tongs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tongs.h; sourceTree = "<group>"; };
+		90E30E771F4D8720003BCDE1 /* ElastiQ.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ElastiQ.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				1687DA321F4D60800063757A /* Parameter.swift */,
 				1687DA331F4D60800063757A /* ParameterProtocols.swift */,
 				1687DA351F4D60800063757A /* Value.swift */,
+				160B0E161F59283C000E3BDA /* FunctionalScore.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -98,7 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				90E30E731F4D8711003BCDE1 /* Info.plist */,
-				90E30E741F4D8711003BCDE1 /* TongsTests.swift */,
+				90E30E741F4D8711003BCDE1 /* ElastiQTests.swift */,
 			);
 			path = ElastiQTests;
 			sourceTree = "<group>";
@@ -107,7 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				90E30E761F4D8720003BCDE1 /* Info.plist */,
-				90E30E771F4D8720003BCDE1 /* Tongs.h */,
+				90E30E771F4D8720003BCDE1 /* ElastiQ.h */,
 			);
 			path = ElastiQ;
 			sourceTree = "<group>";
@@ -139,7 +142,7 @@
 			dependencies = (
 			);
 			name = ElastiQ;
-			productName = Tongs;
+			productName = ElastiQ;
 			productReference = 1687238C1F4D44BC00AC575A /* ElastiQ.framework */;
 			productType = "com.apple.product-type.framework";
 		};
@@ -157,7 +160,7 @@
 				168723981F4D44BC00AC575A /* PBXTargetDependency */,
 			);
 			name = ElastiQTests;
-			productName = TongsTests;
+			productName = ElastiQTests;
 			productReference = 168723951F4D44BC00AC575A /* ElastiQTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
@@ -223,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1687DA381F4D608A0063757A /* Parameter.swift in Sources */,
+				160B0E171F59283C000E3BDA /* FunctionalScore.swift in Sources */,
 				90E30E711F4D86F2003BCDE1 /* ElastiQ.swift in Sources */,
 				1687DA391F4D608A0063757A /* ParameterProtocols.swift in Sources */,
 				1687DA371F4D608A0063757A /* HasParameter.swift in Sources */,

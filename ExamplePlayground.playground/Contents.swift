@@ -104,6 +104,7 @@ do {
         $0.functionScore({ functionScore in
             functionScore
                 .query { $0.matchAll() }
+                .functions([])
                 .boost(5)
                 .maxBoost(42)
                 .minScore(42)

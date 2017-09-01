@@ -21,6 +21,17 @@ extension ElastiQ {
         }
 
         @discardableResult
+        public func functions(_ function: Any) -> Self {
+            return functions([function])
+        }
+
+        @discardableResult
+        public func functions(_ functions: [Any]) -> Self {
+            add(Functions(functions))
+            return self
+        }
+
+        @discardableResult
         public func boost(_ value: QueryNumberValue) -> Self {
             add(ElastiQ.Parameter.Boost(value: value))
             return self

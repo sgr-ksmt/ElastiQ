@@ -20,14 +20,8 @@ extension ElastiQ {
             return self
         }
 
-        @discardableResult
-        public func functions(_ function: Any) -> Self {
-            return functions([function])
-        }
-
-        @discardableResult
-        public func functions(_ functions: [Any]) -> Self {
-            add(Functions(functions))
+        public func functions(_ configurationBlock: ParameterConfigurationBlock<Functions>) -> Self{
+            add(Functions(), configurationBlock: configurationBlock)
             return self
         }
 

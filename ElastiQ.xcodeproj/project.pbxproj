@@ -18,6 +18,7 @@
 		1687DA3B1F4D608A0063757A /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1687DA351F4D60800063757A /* Value.swift */; };
 		16F660E81F5D1DF90027B5DF /* HasTermLevelQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F660E71F5D1DF90027B5DF /* HasTermLevelQuery.swift */; };
 		16F660EA1F5D1EF50027B5DF /* TermLevelQueries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F660E91F5D1EF50027B5DF /* TermLevelQueries.swift */; };
+		16F660EC1F5D353A0027B5DF /* FullTextQueries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F660EB1F5D353A0027B5DF /* FullTextQueries.swift */; };
 		90E30E711F4D86F2003BCDE1 /* ElastiQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E30E701F4D86F2003BCDE1 /* ElastiQ.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		1687DA351F4D60800063757A /* Value.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Value.swift; sourceTree = "<group>"; };
 		16F660E71F5D1DF90027B5DF /* HasTermLevelQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasTermLevelQuery.swift; sourceTree = "<group>"; };
 		16F660E91F5D1EF50027B5DF /* TermLevelQueries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermLevelQueries.swift; sourceTree = "<group>"; };
+		16F660EB1F5D353A0027B5DF /* FullTextQueries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullTextQueries.swift; sourceTree = "<group>"; };
 		90E30E701F4D86F2003BCDE1 /* ElastiQ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElastiQ.swift; sourceTree = "<group>"; };
 		90E30E731F4D8711003BCDE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90E30E741F4D8711003BCDE1 /* ElastiQTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElastiQTests.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				165037A81F596433001C0872 /* Functions.swift */,
 				16F660E91F5D1EF50027B5DF /* TermLevelQueries.swift */,
 				16F660E71F5D1DF90027B5DF /* HasTermLevelQuery.swift */,
+				16F660EB1F5D353A0027B5DF /* FullTextQueries.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				16F660EA1F5D1EF50027B5DF /* TermLevelQueries.swift in Sources */,
 				16F660E81F5D1DF90027B5DF /* HasTermLevelQuery.swift in Sources */,
 				165037A91F596433001C0872 /* Functions.swift in Sources */,
+				16F660EC1F5D353A0027B5DF /* FullTextQueries.swift in Sources */,
 				160B0E171F59283C000E3BDA /* FunctionScore.swift in Sources */,
 				90E30E711F4D86F2003BCDE1 /* ElastiQ.swift in Sources */,
 				1687DA391F4D608A0063757A /* ParameterProtocols.swift in Sources */,

@@ -49,6 +49,5 @@ extension ElastiQ {
             add(ElastiQ.Parameter.RandomScore())
             return self
         }
-
     }
 }

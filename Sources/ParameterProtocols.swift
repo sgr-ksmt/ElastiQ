@@ -8,9 +8,15 @@
 
 import Foundation
 
+
 public protocol QueryParameter {
     var parameterName: String { get }
     var body: Any { get }
+}
+
+public protocol HasParameter: class {
+    func add<T: QueryParameter>(_ parameter: T)
+    func add<T: QueryParameter>(_ parameter: T, configurationBlock: ParameterConfigurationBlock<T>)
 }
 
 public protocol HasSingleParameter: HasParameter {

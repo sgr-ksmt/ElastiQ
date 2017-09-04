@@ -41,22 +41,22 @@ extension ElastiQ {
 }
 
 extension ElastiQ.BoolQuery {
-    public final class Filter: BoolQueryParameter {
+    public final class Filter: BoolQueryParameter, HasTermLevelQuery {
         public let parameterName = "filter"
         public var parameters: [QueryParameter] = []
     }
 
-    public final class Must: BoolQueryParameter {
+    public final class Must: BoolQueryParameter, HasTermLevelQuery {
         public let parameterName = "must"
         public var parameters: [QueryParameter] = []
     }
 
-    public final class Should: BoolQueryParameter {
+    public final class Should: BoolQueryParameter, HasTermLevelQuery {
         public let parameterName = "should"
         public var parameters: [QueryParameter] = []
     }
 
-    public final class MustNot: BoolQueryParameter {
+    public final class MustNot: BoolQueryParameter, HasTermLevelQuery {
         public let parameterName = "must_not"
         public var parameters: [QueryParameter] = []
     }

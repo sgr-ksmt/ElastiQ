@@ -44,8 +44,10 @@ do {
 print("----------------")
 
 do {
-    let query = ElastiQ()
-        .range(\Recipe.cookTimeMin, [.lt(30), .gte(10)])
+    let query = ElastiQ().query {
+        $0.range(\Recipe.cookTimeMin, [.lt(30), .gte(10)])
+    }
+
 
     printJSON(query)
 }

@@ -5,7 +5,9 @@ import ElastiQ
 
 class Recipe {
     @objc dynamic var cookTimeMin: Int = 0
+    @objc dynamic var prepTimeMin: Int = 0
     @objc dynamic var title: String = ""
+    @objc dynamic var tags: String = ""
 }
 
 func printJSON(_ query: ElastiQ) {
@@ -103,18 +105,34 @@ print("----------------")
 
 do {
     let query = ElastiQ().query {
-        $0.functionScore({ functionScore in
+        $0.functionScore { functionScore in
             functionScore
-                .query { $0.matchAll() }
-                .functions {
-                    $0.add { _ in }.add { _ in }
+                .query {
+                    $0.bool {
+                        $0.must { must in
+                            must.term(\Recipe.tags, "vegetarian")
+                        }
+                    }
                 }
-                .boost(5)
-                .maxBoost(42)
-                .minScore(42)
-                .scoreMode(.max)
+                .scoreMode(.sum)
                 .boostMode(.multiply)
-        })
+                .functions { functions in
+                    functions.add { function in
+                        function
+                            .filter { filter in
+                                filter.term(\Recipe.cookTimeMin, 10)
+                            }
+                            .weight(10)
+                        }
+                        .add({ function in
+                        function
+                            .filter { filter in
+                                filter.range(\Recipe.prepTimeMin, .lte(20))
+                            }
+                            .weight(10)
+                        })
+                }
+        }
     }
     printJSON(query)
 }

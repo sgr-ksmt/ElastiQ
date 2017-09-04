@@ -10,7 +10,7 @@ import Foundation
 
 extension ElastiQ {
     public final class BoolQuery: QueryParameter, HaveMultipleParameters {
-        public let parameterName: String = "bool"
+        public let parameterName = "bool"
         public typealias ParameterBlock<T> = (T) -> Void
         public var parameters: [QueryParameter] = []
 
@@ -42,22 +42,22 @@ extension ElastiQ {
 
 extension ElastiQ.BoolQuery {
     public final class Filter: BoolQueryParameter {
-        public let parameterName: String = "filter"
+        public let parameterName = "filter"
         public var parameters: [QueryParameter] = []
     }
 
     public final class Must: BoolQueryParameter {
-        public let parameterName: String = "must"
+        public let parameterName = "must"
         public var parameters: [QueryParameter] = []
     }
 
     public final class Should: BoolQueryParameter {
-        public let parameterName: String = "should"
+        public let parameterName = "should"
         public var parameters: [QueryParameter] = []
     }
 
     public final class MustNot: BoolQueryParameter {
-        public let parameterName: String = "must_not"
+        public let parameterName = "must_not"
         public var parameters: [QueryParameter] = []
     }
 }

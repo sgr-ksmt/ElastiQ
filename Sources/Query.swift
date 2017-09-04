@@ -10,7 +10,7 @@ import Foundation
 
 extension ElastiQ {
     public final class Query: HasSingleParameter, QueryParameter {
-        public let parameterName: String = "query"
+        public let parameterName = "query"
 
         public var parameter: QueryParameter?
 

@@ -10,7 +10,7 @@ import Foundation
 
 extension ElastiQ {
     public final class Functions: QueryParameter {
-        public let parameterName: String = "functions"
+        public let parameterName = "functions"
 
         var functions: [Function] = []
 
@@ -28,7 +28,7 @@ extension ElastiQ {
     }
 
     public final class Function: QueryParameter, HaveMultipleParameters {
-        public let parameterName: String = "function"
+        public let parameterName = "function"
 
         public var parameters: [QueryParameter] = []
     }

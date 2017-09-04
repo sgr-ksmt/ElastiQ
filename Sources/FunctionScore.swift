@@ -10,7 +10,7 @@ import Foundation
 
 extension ElastiQ {
     public final class FunctionScore: QueryParameter, HaveMultipleParameters {
-        public let parameterName: String = "function_score"
+        public let parameterName = "function_score"
 
         public var parameters: [QueryParameter] = []
 

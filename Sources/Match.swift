@@ -10,7 +10,7 @@ import Foundation
 
 extension ElastiQ {
     public final class MatchAll: QueryParameter, HasSingleParameter {
-        public let parameterName: String = "match_all"
+        public let parameterName = "match_all"
 
         public var parameter: QueryParameter?
 
@@ -22,7 +22,7 @@ extension ElastiQ {
     }
 
     public final class MatchNone: QueryParameter {
-        public let parameterName: String = "match_none"
+        public let parameterName = "match_none"
 
         public var body: Any {
             return [:]

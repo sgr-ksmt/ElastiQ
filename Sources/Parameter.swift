@@ -13,7 +13,7 @@ extension ElastiQ {
         private init() {}
 
         public struct From: QueryParameter {
-            public let parameterName: String = "from"
+            public let parameterName = "from"
             public let value: QueryNumberValue
 
             public var body: Any {
@@ -22,7 +22,7 @@ extension ElastiQ {
         }
 
         public struct Size: QueryParameter {
-            public let parameterName: String = "size"
+            public let parameterName = "size"
             public let value: QueryNumberValue
 
             public var body: Any {
@@ -32,7 +32,7 @@ extension ElastiQ {
 
 
         public struct Term: QueryParameter {
-            public let parameterName: String = "term"
+            public let parameterName = "term"
             public let key: String
             public let value: QueryValue
 
@@ -42,7 +42,7 @@ extension ElastiQ {
         }
 
         public struct Terms: QueryParameter {
-            public let parameterName: String = "terms"
+            public let parameterName = "terms"
             public let key: String
             public let values: [QueryValue]
 
@@ -69,7 +69,7 @@ extension ElastiQ {
                 }
             }
 
-            public let parameterName: String = "range"
+            public let parameterName = "range"
             public let key: String
             public let conditions: [Condition]
 
@@ -79,7 +79,7 @@ extension ElastiQ {
         }
 
         public struct Boost: QueryParameter {
-            public let parameterName: String = "boost"
+            public let parameterName = "boost"
             public let value: QueryNumberValue
 
             public var body: Any {
@@ -88,7 +88,7 @@ extension ElastiQ {
         }
 
         public struct MaxBoost: QueryParameter {
-            public let parameterName: String = "max_boost"
+            public let parameterName = "max_boost"
             public let value: QueryNumberValue
 
             public var body: Any {
@@ -97,7 +97,7 @@ extension ElastiQ {
         }
 
         public struct MinScore: QueryParameter {
-            public let parameterName: String = "min_score"
+            public let parameterName = "min_score"
             public let value: QueryNumberValue
 
             public var body: Any {
@@ -106,7 +106,7 @@ extension ElastiQ {
         }
 
         public struct ScoreMode: QueryParameter {
-            public let parameterName: String = "score_mode"
+            public let parameterName = "score_mode"
             public enum Mode: String {
                 case multiply
                 case sum
@@ -115,7 +115,7 @@ extension ElastiQ {
                 case max
                 case min
             }
-            let mode: Mode
+            public let mode: Mode
 
             public var body: Any {
                 return mode.rawValue
@@ -123,7 +123,7 @@ extension ElastiQ {
         }
 
         public struct BoostMode: QueryParameter {
-            public let parameterName: String = "boost_mode"
+            public let parameterName = "boost_mode"
             public enum Mode: String {
                 case multiply
                 case replace
@@ -133,10 +133,26 @@ extension ElastiQ {
                 case min
             }
 
-            let mode: Mode
+            public let mode: Mode
 
             public var body: Any {
                 return mode.rawValue
+            }
+        }
+
+        public struct Weight: QueryParameter {
+            public let parameterName = "weight"
+            public let value: QueryNumberValue
+
+            public var body: Any {
+                return value
+            }
+        }
+
+        public struct RandomScore: QueryParameter {
+            public let parameterName = "random_score"
+            public var body: Any {
+                return [:]
             }
         }
     }

@@ -54,10 +54,6 @@ extension ElastiQ {
             add(ElastiQ.Parameter.BoostMode(mode: mode))
             return self
         }
-
-        public var body: Any {
-            return Dictionary(uniqueKeysWithValues: parameters.map { ($0.parameterName, $0.body) })
-        }
     }
 }
 

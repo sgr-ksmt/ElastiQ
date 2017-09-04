@@ -74,7 +74,7 @@ extension ElastiQ {
             public let conditions: [Condition]
 
             public var body: Any {
-                return [key: Dictionary(uniqueKeysWithValues: conditions.map { ($0.element.key, $0.element.value) })]
+                return [key: conditions.reduce(into: [:]) { $0[$1.element.key] = $1.element.value }]
             }
         }
 

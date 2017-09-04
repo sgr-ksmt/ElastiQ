@@ -45,6 +45,10 @@ extension HaveMultipleParameters {
         configurationBlock(parameter)
         self.parameters.append(parameter)
     }
+
+    public var body: Any {
+        return parameters.reduce(into: [:]) { $0[$1.parameterName] = $1.body }
+    }
 }
 
 public protocol BoolQueryParameter: QueryParameter, HaveMultipleParameters {

@@ -31,9 +31,5 @@ extension ElastiQ {
         public let parameterName: String = "function"
 
         public var parameters: [QueryParameter] = []
-
-        public var body: Any {
-            return Dictionary(uniqueKeysWithValues: parameters.map { ($0.parameterName, $0.body) })
-        }
     }
 }

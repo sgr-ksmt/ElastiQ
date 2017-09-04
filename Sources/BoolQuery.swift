@@ -37,10 +37,6 @@ extension ElastiQ {
             add(MustNot(), configurationBlock: configurationBlock)
             return self
         }
-
-        public var body: Any {
-            return Dictionary(uniqueKeysWithValues: parameters.map { ($0.parameterName, $0.body) })
-        }
     }
 }
 

@@ -33,10 +33,6 @@ public final class ElastiQ: HaveMultipleParameters {
         return self
     }
 
-    public var body: Any {
-        return Dictionary(uniqueKeysWithValues: parameters.map { ($0.parameterName, $0.body) })
-    }
-
     public func json() throws -> Data {
         return try JSONSerialization.data(withJSONObject: body, options: .prettyPrinted)
     }

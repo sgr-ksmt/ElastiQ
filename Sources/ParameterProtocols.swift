@@ -62,6 +62,14 @@ public protocol BoolQueryParameter: QueryParameter, HaveMultipleParameters {
 
 extension BoolQueryParameter {
     public var body: Any {
-        return parameters.map { [$0.parameterName: $0.body] }
+        switch parameters.count {
+        case 0:
+            return [:]
+        case 1:
+            let param = parameters.first!
+            return [param.parameterName: param.body]
+        default:
+            return parameters.map { [$0.parameterName: $0.body] }
+        }
     }
 }

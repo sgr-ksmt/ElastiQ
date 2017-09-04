@@ -23,17 +23,17 @@ extension ElastiQ {
             public let parameterName = "match"
 
             public let key: String
-            public let text: String
+            public let value: QueryValue
             public let `operator`: Operator?
             public let zeroTermsQuery: ZeroTermsQuery?
             public let cutoffFrequency: QueryNumberValue?
             public var body: Any {
                 switch (`operator`, zeroTermsQuery, cutoffFrequency) {
                 case (nil, nil, nil):
-                    return [key: text]
+                    return [key: value]
                 default:
                     var subBody: [AnyHashable: Any] = [:]
-                    subBody["query"] = text
+                    subBody["query"] = value
                     subBody["operator"] = `operator`?.rawValue
                     subBody["zero_terms_query"] = zeroTermsQuery?.rawValue
                     subBody["cutoff_frequency"] = cutoffFrequency

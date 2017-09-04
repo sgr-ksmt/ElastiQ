@@ -9,7 +9,7 @@
 import Foundation
 
 extension ElastiQ {
-    public final class Query: HasSingleParameter, QueryParameter, HasTermLevelQuery {
+    public final class Query: HasSingleParameter, QueryParameter, HasTermLevelQuery, HasFullTextQuery {
         public let parameterName = "query"
 
         public var parameter: QueryParameter?

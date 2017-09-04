@@ -147,3 +147,14 @@ do {
 
     printJSON(query)
 }
+
+print("----------------")
+
+do {
+    let query = ElastiQ()
+        .query { query in
+            query.match("hoge", 10, .and, .all, 0.001)
+    }
+
+    printJSON(query)
+}

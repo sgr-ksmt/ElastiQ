@@ -8,9 +8,15 @@
 
 import Foundation
 
+
 public protocol QueryParameter {
     var parameterName: String { get }
     var body: Any { get }
+}
+
+public protocol HasParameter: class {
+    func add<T: QueryParameter>(_ parameter: T)
+    func add<T: QueryParameter>(_ parameter: T, configurationBlock: ParameterConfigurationBlock<T>)
 }
 
 public protocol HasSingleParameter: HasParameter {
@@ -18,8 +24,17 @@ public protocol HasSingleParameter: HasParameter {
 }
 
 extension HasSingleParameter {
-    public func add(_ parameter: QueryParameter) {
+    public func add<T: QueryParameter>(_ parameter: T) {
         self.parameter = parameter
+    }
+
+    public func add<T: QueryParameter>(_ parameter: T, configurationBlock: ParameterConfigurationBlock<T>) {
+        configurationBlock(parameter)
+        self.parameter = parameter
+    }
+
+    public var body: Any {
+        return parameter.map { [$0.parameterName: $0.body] } ?? [:]
     }
 }
 
@@ -28,18 +43,33 @@ public protocol HaveMultipleParameters: HasParameter {
 }
 
 extension HaveMultipleParameters {
-    public func add(_ parameter: QueryParameter) {
+    public func add<T: QueryParameter>(_ parameter: T) {
         self.parameters.append(parameter)
+    }
+
+    public func add<T: QueryParameter>(_ parameter: T, configurationBlock: ParameterConfigurationBlock<T>) {
+        configurationBlock(parameter)
+        self.parameters.append(parameter)
+    }
+
+    public var body: Any {
+        return parameters.reduce(into: [:]) { $0[$1.parameterName] = $1.body }
     }
 }
 
-public protocol BoolQueryParameter: HaveMultipleParameters {
-    var queryName: String { get }
-    var body: Any { get }
+public protocol BoolQueryParameter: QueryParameter, HaveMultipleParameters {
 }
 
 extension BoolQueryParameter {
     public var body: Any {
-        return parameters.map { [$0.parameterName: $0.body] }
+        switch parameters.count {
+        case 0:
+            return [:]
+        case 1:
+            let param = parameters.first!
+            return [param.parameterName: param.body]
+        default:
+            return parameters.map { [$0.parameterName: $0.body] }
+        }
     }
 }

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "ElastiQ"
-  s.version          = "0.3"
+  s.version          = "0.4"
   s.summary          = "Generate ElasticSearch query in Swift"
   s.homepage         = "https://github.com/sgr-ksmt/ElastiQ"
   # s.screenshots     = ""

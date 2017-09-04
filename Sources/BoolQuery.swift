@@ -9,55 +9,55 @@
 import Foundation
 
 extension ElastiQ {
-    public final class BoolQuery: QueryParameter {
-        public let parameterName: String = "bool"
+    public final class BoolQuery: QueryParameter, HaveMultipleParameters {
+        public let parameterName = "bool"
+        public typealias ParameterBlock<T> = (T) -> Void
+        public var parameters: [QueryParameter] = []
 
-        private var queries: [BoolQueryParameter] = []
-
-        public func filter(_ block: (Filter) -> Filter) -> Self {
-            queries.append(block(Filter()))
+        @discardableResult
+        public func filter(_ configurationBlock: ParameterConfigurationBlock<Filter>) -> Self {
+            add(Filter(), configurationBlock: configurationBlock)
             return self
         }
 
-        public func must(_ block: (Must) -> Must) -> Self {
-            queries.append(block(Must()))
+        @discardableResult
+        public func must(_ configurationBlock: ParameterConfigurationBlock<Must>) -> Self {
+            add(Must(), configurationBlock: configurationBlock)
             return self
         }
 
-        public func should(_ block: (Should) -> Should) -> Self {
-            queries.append(block(Should()))
+        @discardableResult
+        public func should(_ configurationBlock: ParameterConfigurationBlock<Should>) -> Self {
+            add(Should(), configurationBlock: configurationBlock)
             return self
         }
 
-        public func mustNot(_ block: (MustNot) -> MustNot) -> Self {
-            queries.append(block(MustNot()))
+        @discardableResult
+        public func mustNot(_ configurationBlock: ParameterConfigurationBlock<MustNot>) -> Self {
+            add(MustNot(), configurationBlock: configurationBlock)
             return self
-        }
-
-        public var body: Any {
-            return Dictionary(uniqueKeysWithValues: queries.map { ($0.queryName, $0.body) })
         }
     }
 }
 
 extension ElastiQ.BoolQuery {
-    public final class Filter: BoolQueryParameter {
-        public let queryName: String = "filter"
+    public final class Filter: BoolQueryParameter, HasTermLevelQuery {
+        public let parameterName = "filter"
         public var parameters: [QueryParameter] = []
     }
 
-    public final class Must: BoolQueryParameter {
-        public let queryName: String = "must"
+    public final class Must: BoolQueryParameter, HasTermLevelQuery {
+        public let parameterName = "must"
         public var parameters: [QueryParameter] = []
     }
 
-    public final class Should: BoolQueryParameter {
-        public let queryName: String = "should"
+    public final class Should: BoolQueryParameter, HasTermLevelQuery {
+        public let parameterName = "should"
         public var parameters: [QueryParameter] = []
     }
 
-    public final class MustNot: BoolQueryParameter {
-        public let queryName: String = "must_not"
+    public final class MustNot: BoolQueryParameter, HasTermLevelQuery {
+        public let parameterName = "must_not"
         public var parameters: [QueryParameter] = []
     }
 }

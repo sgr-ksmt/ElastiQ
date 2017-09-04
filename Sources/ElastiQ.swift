@@ -8,20 +8,28 @@
 
 import Foundation
 
-public final class ElastiQ: HasSingleParameter {
+public typealias ParameterConfigurationBlock<T> = (T) -> Void
 
-    public var parameter: QueryParameter?
+public final class ElastiQ: HaveMultipleParameters {
+    public var parameters: [QueryParameter] = []
 
-    public init() {
+    public init() {}
 
+    @discardableResult
+    public func from(_ value: QueryNumberValue) -> Self {
+        add(ElastiQ.Parameter.From(value: value))
+        return self
     }
-    
-    public var body: Any {
-        return parameter.map { ["query": [$0.parameterName: $0.body]] } ?? [:]
+
+    @discardableResult
+    public func size(_ value: QueryNumberValue) -> Self {
+        add(ElastiQ.Parameter.Size(value: value))
+        return self
     }
 
-    public func bool(_ block: (BoolQuery) -> (BoolQuery)) -> Self {
-        add(block(BoolQuery()))
+    @discardableResult
+    public func query(_ configurationBlock: ParameterConfigurationBlock<Query>) -> Self {
+        add(Query(), configurationBlock: configurationBlock)
         return self
     }
 
@@ -29,3 +37,4 @@ public final class ElastiQ: HasSingleParameter {
         return try JSONSerialization.data(withJSONObject: body, options: .prettyPrinted)
     }
 }
+

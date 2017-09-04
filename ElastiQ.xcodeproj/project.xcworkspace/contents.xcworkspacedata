@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Tongs.xcodeproj">
+      location = "self:ElastiQ.xcodeproj">
    </FileRef>
 </Workspace>

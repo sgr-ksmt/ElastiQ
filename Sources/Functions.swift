@@ -31,5 +31,24 @@ extension ElastiQ {
         public let parameterName = "function"
 
         public var parameters: [QueryParameter] = []
+
+        @discardableResult
+        public func filter(_ configurationBlock: ParameterConfigurationBlock<ElastiQ.BoolQuery.Filter>) -> Self {
+            add(ElastiQ.BoolQuery.Filter(), configurationBlock: configurationBlock)
+            return self
+        }
+
+        @discardableResult
+        public func weight(_ value: QueryNumberValue) -> Self {
+            add(ElastiQ.Parameter.Weight(value: value))
+            return self
+        }
+
+        @discardableResult
+        public func randomScore() -> Self {
+            add(ElastiQ.Parameter.RandomScore())
+            return self
+        }
+
     }
 }

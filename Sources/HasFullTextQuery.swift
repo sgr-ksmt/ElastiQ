@@ -16,9 +16,9 @@ extension HasFullTextQuery where Self: HasParameter {
     public func match(
         _ key: String,
         _ value: QueryValue,
-        _ `operator`: ElastiQ.FullTextQueries.Match.Operator? = nil,
-        _ zeroTermsQuery : ElastiQ.FullTextQueries.Match.ZeroTermsQuery? = nil,
-        _ cutoffFrequency: QueryNumberValue? = nil) -> Self {
+        `operator`: ElastiQ.FullTextQueries.Match.Operator? = nil,
+        zeroTermsQuery : ElastiQ.FullTextQueries.Match.ZeroTermsQuery = .unknown,
+        cutoffFrequency: QueryNumberValue? = nil) -> Self {
         add(ElastiQ.FullTextQueries.Match(key: key, value: value, operator: `operator`, zeroTermsQuery: zeroTermsQuery, cutoffFrequency: cutoffFrequency))
         return self
     }

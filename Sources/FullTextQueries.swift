@@ -17,15 +17,20 @@ extension ElastiQ {
                 case and
             }
             public enum ZeroTermsQuery: String {
+                case unknown // avoid Optinal's `none`
                 case none
                 case all
+
+                var value: String? {
+                    return self == .unknown ? nil : self.rawValue
+                }
             }
             public let parameterName = "match"
 
             public let key: String
             public let value: QueryValue
             public let `operator`: Operator?
-            public let zeroTermsQuery: ZeroTermsQuery?
+            public let zeroTermsQuery: ZeroTermsQuery
             public let cutoffFrequency: QueryNumberValue?
             public var body: Any {
                 switch (`operator`, zeroTermsQuery, cutoffFrequency) {
@@ -35,7 +40,7 @@ extension ElastiQ {
                     var subBody: [AnyHashable: Any] = [:]
                     subBody["query"] = value
                     subBody["operator"] = `operator`?.rawValue
-                    subBody["zero_terms_query"] = zeroTermsQuery?.rawValue
+                    subBody["zero_terms_query"] = zeroTermsQuery.value
                     subBody["cutoff_frequency"] = cutoffFrequency
                     return [key: subBody]
                 }

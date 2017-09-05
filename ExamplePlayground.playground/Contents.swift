@@ -153,7 +153,8 @@ print("----------------")
 do {
     let query = ElastiQ()
         .query { query in
-            query.match("hoge", 10, .and, .all, 0.001)
+
+            query.match("hoge", 10, zeroTermsQuery: .none)
     }
 
     printJSON(query)

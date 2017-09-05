@@ -9,14 +9,14 @@
 import Foundation
 
 extension ElastiQ {
-    public final class Query: HasSingleParameter, QueryParameter, HasTermLevelQuery {
+    public final class Query: HasSingleParameter, QueryParameter, HasTermLevelQuery, HasFullTextQuery {
         public let parameterName = "query"
 
         public var parameter: QueryParameter?
 
         @discardableResult
-        public func matchAll(_ configurationBlock: ParameterConfigurationBlock<MatchAll> = { _ in }) -> Self {
-            add(MatchAll(), configurationBlock: configurationBlock)
+        public func matchAll(_ boost: QueryNumberValue? = nil) -> Self {
+            add(MatchAll(boost: boost))
             return self
         }
 

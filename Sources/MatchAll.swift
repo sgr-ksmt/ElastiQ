@@ -9,24 +9,19 @@
 import Foundation
 
 extension ElastiQ {
-    public final class MatchAll: QueryParameter, HasSingleParameter {
+    public struct MatchAll: QueryParameter {
         public let parameterName = "match_all"
 
-        public var parameter: QueryParameter?
+        let boost: QueryNumberValue?
 
-        @discardableResult
-        public func boost(_ value: QueryNumberValue) -> Self {
-            add(ElastiQ.Parameter.Boost(value: value))
-            return self
+        public var body: Any {
+            return boost.map { ["boost": $0] } ?? [:]
         }
     }
 
-    public final class MatchNone: QueryParameter {
+    public struct MatchNone: QueryParameter {
         public let parameterName = "match_none"
-
-        public var body: Any {
-            return [:]
-        }
+        public let body: Any = [:]
     }
 
 }

@@ -8,6 +8,7 @@ class Recipe {
     @objc dynamic var prepTimeMin: Int = 0
     @objc dynamic var title: String = ""
     @objc dynamic var tags: String = ""
+    @objc dynamic var foo: String?
 }
 
 func printJSON(_ query: ElastiQ) {
@@ -153,8 +154,18 @@ print("----------------")
 do {
     let query = ElastiQ()
         .query { query in
-
             query.match("hoge", 10, zeroTermsQuery: .none)
+    }
+
+    printJSON(query)
+}
+
+print("----------------")
+
+do {
+    let query = ElastiQ()
+        .query { query in
+            query.term(\Recipe.foo, "")
     }
 
     printJSON(query)

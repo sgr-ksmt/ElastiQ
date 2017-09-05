@@ -14,6 +14,12 @@ public protocol QueryKey {
     var key: String { get }
 }
 
+extension QueryKey {
+    func key(usesKeyword: Bool) -> String {
+        return usesKeyword ? "\(key).keyword" : key
+    }
+}
+
 extension Int: QueryValue, QueryNumberValue {}
 extension UInt: QueryValue, QueryNumberValue {}
 extension Float: QueryValue, QueryNumberValue {}

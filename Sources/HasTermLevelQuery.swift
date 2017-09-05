@@ -13,14 +13,14 @@ public protocol HasTermLevelQuery {
 
 extension HasTermLevelQuery where Self: HasParameter {
     @discardableResult
-    public func term(_ key: QueryKey, _ value: QueryValue) -> Self {
-        add(ElastiQ.TermLevelQueries.Term(key: key.key, value: value))
+    public func term(_ key: QueryKey, _ value: QueryValue, usesKeyword: Bool = false) -> Self {
+        add(ElastiQ.TermLevelQueries.Term(key: key.key(usesKeyword: usesKeyword), value: value))
         return self
     }
 
     @discardableResult
-    public func terms(_ key: QueryKey, _ values: [QueryValue]) -> Self {
-        add(ElastiQ.TermLevelQueries.Terms(key: key.key, values: values))
+    public func terms(_ key: QueryKey, _ values: [QueryValue], usesKeyword: Bool = false) -> Self {
+        add(ElastiQ.TermLevelQueries.Terms(key: key.key(usesKeyword: usesKeyword), values: values))
         return self
     }
 

@@ -165,7 +165,7 @@ print("----------------")
 do {
     let query = ElastiQ()
         .query { query in
-            query.term(\Recipe.foo, "")
+            query.term(\Recipe.foo, "", usesKeyword: true)
     }
 
     printJSON(query)

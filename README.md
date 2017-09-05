@@ -92,7 +92,7 @@ print(String(data: json, encoding: .utf8))
 - Add the following to your *Cartfile*:
 
 ```bash
-github "sgr-ksmt/ElastiQ" ~> 0.5
+github "sgr-ksmt/ElastiQ" ~> 0.6
 ```
 
 - Run `carthage update`

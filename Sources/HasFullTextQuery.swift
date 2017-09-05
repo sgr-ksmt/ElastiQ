@@ -14,12 +14,12 @@ public protocol HasFullTextQuery {
 extension HasFullTextQuery where Self: HasParameter {
     @discardableResult
     public func match(
-        _ key: String,
+        _ key: QueryKey,
         _ value: QueryValue,
         `operator`: ElastiQ.FullTextQueries.Match.Operator? = nil,
         zeroTermsQuery : ElastiQ.FullTextQueries.Match.ZeroTermsQuery = .unknown,
         cutoffFrequency: QueryNumberValue? = nil) -> Self {
-        add(ElastiQ.FullTextQueries.Match(key: key, value: value, operator: `operator`, zeroTermsQuery: zeroTermsQuery, cutoffFrequency: cutoffFrequency))
+        add(ElastiQ.FullTextQueries.Match(key: key.key, value: value, operator: `operator`, zeroTermsQuery: zeroTermsQuery, cutoffFrequency: cutoffFrequency))
         return self
     }
 }

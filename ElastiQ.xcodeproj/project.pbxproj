@@ -16,6 +16,8 @@
 		1687DA381F4D608A0063757A /* Parameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1687DA321F4D60800063757A /* Parameter.swift */; };
 		1687DA391F4D608A0063757A /* ParameterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1687DA331F4D60800063757A /* ParameterProtocols.swift */; };
 		1687DA3B1F4D608A0063757A /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1687DA351F4D60800063757A /* Value.swift */; };
+		1698D70F1F67BF5200FF4983 /* GeoQueries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1698D70E1F67BF5200FF4983 /* GeoQueries.swift */; };
+		1698D7111F67C8A400FF4983 /* HasGeoQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1698D7101F67C8A400FF4983 /* HasGeoQuery.swift */; };
 		16F660E81F5D1DF90027B5DF /* HasTermLevelQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F660E71F5D1DF90027B5DF /* HasTermLevelQuery.swift */; };
 		16F660EA1F5D1EF50027B5DF /* TermLevelQueries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F660E91F5D1EF50027B5DF /* TermLevelQueries.swift */; };
 		16F660EC1F5D353A0027B5DF /* FullTextQueries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F660EB1F5D353A0027B5DF /* FullTextQueries.swift */; };
@@ -45,6 +47,8 @@
 		1687DA321F4D60800063757A /* Parameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameter.swift; sourceTree = "<group>"; };
 		1687DA331F4D60800063757A /* ParameterProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterProtocols.swift; sourceTree = "<group>"; };
 		1687DA351F4D60800063757A /* Value.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Value.swift; sourceTree = "<group>"; };
+		1698D70E1F67BF5200FF4983 /* GeoQueries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoQueries.swift; sourceTree = "<group>"; };
+		1698D7101F67C8A400FF4983 /* HasGeoQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasGeoQuery.swift; sourceTree = "<group>"; };
 		16F660E71F5D1DF90027B5DF /* HasTermLevelQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasTermLevelQuery.swift; sourceTree = "<group>"; };
 		16F660E91F5D1EF50027B5DF /* TermLevelQueries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermLevelQueries.swift; sourceTree = "<group>"; };
 		16F660EB1F5D353A0027B5DF /* FullTextQueries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullTextQueries.swift; sourceTree = "<group>"; };
@@ -111,6 +115,8 @@
 				16F660E71F5D1DF90027B5DF /* HasTermLevelQuery.swift */,
 				16F660EB1F5D353A0027B5DF /* FullTextQueries.swift */,
 				16FDD0001F5D67EB00C38681 /* HasFullTextQuery.swift */,
+				1698D70E1F67BF5200FF4983 /* GeoQueries.swift */,
+				1698D7101F67C8A400FF4983 /* HasGeoQuery.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -245,6 +251,7 @@
 			files = (
 				1687DA381F4D608A0063757A /* Parameter.swift in Sources */,
 				165037A51F594132001C0872 /* Query.swift in Sources */,
+				1698D70F1F67BF5200FF4983 /* GeoQueries.swift in Sources */,
 				165037A71F595E95001C0872 /* MatchAll.swift in Sources */,
 				16F660EA1F5D1EF50027B5DF /* TermLevelQueries.swift in Sources */,
 				16F660E81F5D1DF90027B5DF /* HasTermLevelQuery.swift in Sources */,
@@ -252,6 +259,7 @@
 				16F660EC1F5D353A0027B5DF /* FullTextQueries.swift in Sources */,
 				160B0E171F59283C000E3BDA /* FunctionScore.swift in Sources */,
 				16FDD0011F5D67EB00C38681 /* HasFullTextQuery.swift in Sources */,
+				1698D7111F67C8A400FF4983 /* HasGeoQuery.swift in Sources */,
 				90E30E711F4D86F2003BCDE1 /* ElastiQ.swift in Sources */,
 				1687DA391F4D608A0063757A /* ParameterProtocols.swift in Sources */,
 				1687DA361F4D608A0063757A /* BoolQuery.swift in Sources */,

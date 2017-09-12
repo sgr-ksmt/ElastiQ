@@ -170,3 +170,18 @@ do {
 
     printJSON(query)
 }
+
+print("----------------")
+
+do {
+    let query = ElastiQ()
+        .query { query in
+            query.bool {
+                $0.filter { filter in
+                    filter.geoDistance(("pin", 40, 70), .mi(10), distanceType: .plane)
+                }
+            }
+    }
+
+    printJSON(query)
+}

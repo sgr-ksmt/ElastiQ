@@ -62,7 +62,7 @@ extension ElastiQ {
 
             public var body: Any {
                 var body: [AnyHashable: Any] = [:]
-                body["\(location.key).location"] = ["lat": location.lat, "lon": location.lon]
+                body[location.key] = ["lat": location.lat, "lon": location.lon]
                 body["distance"] = distance?.value
                 body["distance_type"] = distanceType?.rawValue
                 return body
